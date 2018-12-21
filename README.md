@@ -5,13 +5,21 @@
 
 # TextMate Bulma CSS framework bundle
 
-@wip
+Un-official Bulma CSS helper bundle for you with ❤️ You can visit Bulma’s
+web site via https://bulma.io
+
+All the example snippets are borrowed from Bulma’s examples!
 
 ---
 
 ## Installation
 
-@wip
+```bash
+$ cd "$HOME/Library/Application Support/TextMate/Bundles/"
+$ git clone https://github.com/vigo/textmate2-bulma.git textmate2-bulma.tmbundle
+```
+
+Reload TextMate If It’s needed.
 
 ---
 
@@ -45,22 +53,22 @@ Prefixes are:
 
 Covers column related snippets and class names.
 
-- Columns wrapper
-- Column wrapper
-- Column sizes (*three-quarters, two-thirds etc...*)
+- Column/Columns wrapper
+- Column/Columns sizes and responsive (*three-quarters, two-thirds + mobile,tablet etc...*)
 - 12 Columns system (`is-1` *etc...*)
+- Offset, Gaps, Multiline, Vertical/Horizontal alignment prefixes
 - Narrow column and responsive helpers
-- 4 Columns Example snippet
-- 6 Columns Example snippet
 
 ### Column Examples: `cole`
 
-- 2 Columns
-- 4 Columns
-- 6 Columns
-- 8 Columns
+- 2,3,4,6,8 Columns
 - Auto Columns
-- 12 Columns (*1 to 12*)
+- 12 Column 1 to 12
+- 4 Columns responsive
+- 3 + 1 Columns responsive and variable sizes
+- Vertical centered and multi lines
+- Multine in a single row for mobile
+- Centerin Colums
 
 ---
 
