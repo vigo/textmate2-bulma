@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;nav class="level is-mobile"&gt;
+    &lt;div class="level-item has-text-centered"&gt;
+        &lt;div&gt;
+            &lt;p class="heading"&gt;Tweets&lt;/p&gt;
+            &lt;p class="title"&gt;3,456&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="level-item has-text-centered"&gt;
+        &lt;div&gt;
+            &lt;p class="heading"&gt;Following&lt;/p&gt;
+            &lt;p class="title"&gt;123&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="level-item has-text-centered"&gt;
+        &lt;div&gt;
+            &lt;p class="heading"&gt;Followers&lt;/p&gt;
+            &lt;p class="title"&gt;456K&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="level-item has-text-centered"&gt;
+        &lt;div&gt;
+            &lt;p class="heading"&gt;Likes&lt;/p&gt;
+            &lt;p class="title"&gt;789&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;</string>
+	<key>name</key>
+	<string>Mobile Level (Level)</string>
+	<key>scope</key>
+	<string>text.html</string>
+	<key>tabTrigger</key>
+	<string>laye</string>
+	<key>uuid</key>
+	<string>210BB2BA-0F53-4A29-BD9B-E50018D7D227</string>
+</dict>
+</plist>

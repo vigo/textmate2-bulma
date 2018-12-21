@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;nav class="level"&gt;
+    &lt;p class="level-item has-text-centered"&gt;
+        &lt;a class="link is-info"&gt;Home&lt;/a&gt;
+    &lt;/p&gt;
+    &lt;p class="level-item has-text-centered"&gt;
+        &lt;a class="link is-info"&gt;Menu&lt;/a&gt;
+    &lt;/p&gt;
+    &lt;p class="level-item has-text-centered"&gt;
+        &lt;img src="https://bulma.io/images/bulma-type.png" alt="" style="height: 30px;"&gt;
+    &lt;/p&gt;
+    &lt;p class="level-item has-text-centered"&gt;
+        &lt;a class="link is-info"&gt;Reservations&lt;/a&gt;
+    &lt;/p&gt;
+    &lt;p class="level-item has-text-centered"&gt;
+        &lt;a class="link is-info"&gt;Contact&lt;/a&gt;
+    &lt;/p&gt;
+&lt;/nav&gt;</string>
+	<key>name</key>
+	<string>Centerd Level (Level)</string>
+	<key>scope</key>
+	<string>text.html</string>
+	<key>tabTrigger</key>
+	<string>laye</string>
+	<key>uuid</key>
+	<string>155C2320-2B86-431C-86BC-9FF4C0FB5892</string>
+</dict>
+</plist>

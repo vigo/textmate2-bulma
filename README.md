@@ -23,23 +23,56 @@ Reload TextMate If It’s needed.
 
 ---
 
-## Keyboard Shortcuts (*with TAB trigger*)
+## List of TAB Triggers
+
+| Trigger                | Information                                 |
+|:-----------------------|:--------------------------------------------|
+| `new` + <kbd>⇥</kbd>  | Generates basic html starter page template. |
+| `cl` + <kbd>⇥</kbd>   | Color helper                                |
+| `typ` + <kbd>⇥</kbd>  | Typography helper                           |
+| `col` + <kbd>⇥</kbd>  | Column helper                               |
+| `cole` + <kbd>⇥</kbd> | Column examples                             |
+| `lay` + <kbd>⇥</kbd>  | Layout helper                               |
+| `laye` + <kbd>⇥</kbd> | Layout examples                             |
+
+---
 
 ### `new`
 
-Generates basic html page template.
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>${1:Title}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+<body>
+    <section class="section">
+        <div class="container">
+            <h1 class="title">Hello World</h1>
+            <p class="subtitle">My first website with <strong>Bulma</strong>!</p>
+        </div>
+    </section>
+</body>
+</html>
+```
 
-### Color Helpers: `cl`
+
+### `cl`
 
 Covers text and background colors. Prefixes are:
 
 - `has-text-`
 - `has-background-`
 
-### Typography Helpers: `typ`
 
-Covers text sizes, alignments, text transformations, weights and font family.
-Prefixes are:
+### `typ`
+
+Covers typography related; text sizes, alignments, text transformations,
+weights and font family. Prefixes are:
 
 - `is-size-`
 - `is-size-` + responsive prefixes (*mobile, tablet etc...*)
@@ -49,7 +82,8 @@ Prefixes are:
 - `is-` + weights (*bold etc...*)
 - `is-family-` + families (*monospace etc...*)
 
-### Column Helpers: `col`
+
+### `col`
 
 Covers column related snippets and class names.
 
@@ -59,7 +93,10 @@ Covers column related snippets and class names.
 - Offset, Gaps, Multiline, Vertical/Horizontal alignment prefixes
 - Narrow column and responsive helpers
 
-### Column Examples: `cole`
+
+### `cole`
+
+Example snippets for column helpers.
 
 - 2,3,4,6,8 Columns
 - Auto Columns
@@ -69,6 +106,33 @@ Covers column related snippets and class names.
 - Vertical centered and multi lines
 - Multine in a single row for mobile
 - Centerin Colums
+
+
+### `lay`
+
+Covers layout helpers.
+
+- Container
+- Container Fluid / Responsive
+- Level
+- Level Item, Left/Right
+- Media
+- Media Content, Left/Right
+
+### `laye`
+
+Examples snippets for layout helpers
+
+Level Examples
+
+- Complex Navbar
+- Centered Level
+- Mobile Level
+
+Media Example
+
+- Tweet
+- Disqus
 
 ---
 

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;article class="media"&gt;
+    &lt;figure class="media-left"&gt;
+        &lt;p class="image is-64x64"&gt;
+            &lt;img src="https://bulma.io/images/placeholders/128x128.png"&gt;
+        &lt;/p&gt;
+    &lt;/figure&gt;
+    &lt;div class="media-content"&gt;
+        &lt;div class="field"&gt;
+            &lt;p class="control"&gt;
+                &lt;textarea class="textarea" placeholder="Add a comment..."&gt;&lt;/textarea&gt;
+            &lt;/p&gt;
+        &lt;/div&gt;
+        &lt;nav class="level"&gt;
+            &lt;div class="level-left"&gt;
+                &lt;div class="level-item"&gt;
+                    &lt;a class="button is-info"&gt;Submit&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="level-right"&gt;
+                &lt;div class="level-item"&gt;
+                    &lt;label class="checkbox"&gt;
+                        &lt;input type="checkbox"&gt; Press enter to submit
+                    &lt;/label&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/nav&gt;
+    &lt;/div&gt;
+&lt;/article&gt;</string>
+	<key>name</key>
+	<string>Disqus (Media)</string>
+	<key>scope</key>
+	<string>text.html</string>
+	<key>tabTrigger</key>
+	<string>laye</string>
+	<key>uuid</key>
+	<string>12F3B1C1-3D6B-4A58-BD21-84D9DAC5F65D</string>
+</dict>
+</plist>

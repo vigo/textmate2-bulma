@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;article class="media"&gt;
+    &lt;figure class="media-left"&gt;
+        &lt;p class="image is-64x64"&gt;
+            &lt;img src="https://bulma.io/images/placeholders/128x128.png"&gt;
+        &lt;/p&gt;
+    &lt;/figure&gt;
+    &lt;div class="media-content"&gt;
+        &lt;div class="content"&gt;
+            &lt;p&gt;
+                &lt;strong&gt;John Smith&lt;/strong&gt; &lt;small&gt;@johnsmith&lt;/small&gt; &lt;small&gt;31m&lt;/small&gt;
+                &lt;br&gt;
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
+            &lt;/p&gt;
+        &lt;/div&gt;
+        &lt;nav class="level is-mobile"&gt;
+            &lt;div class="level-left"&gt;
+                &lt;a class="level-item"&gt;
+                    &lt;span class="icon is-small"&gt;&lt;i class="fas fa-reply"&gt;&lt;/i&gt;&lt;/span&gt;
+                &lt;/a&gt;
+                &lt;a class="level-item"&gt;
+                    &lt;span class="icon is-small"&gt;&lt;i class="fas fa-retweet"&gt;&lt;/i&gt;&lt;/span&gt;
+                &lt;/a&gt;
+                &lt;a class="level-item"&gt;
+                    &lt;span class="icon is-small"&gt;&lt;i class="fas fa-heart"&gt;&lt;/i&gt;&lt;/span&gt;
+                &lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/nav&gt;
+    &lt;/div&gt;
+    &lt;div class="media-right"&gt;
+        &lt;button class="delete"&gt;&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/article&gt;</string>
+	<key>name</key>
+	<string>Tweet (Media)</string>
+	<key>scope</key>
+	<string>text.html</string>
+	<key>tabTrigger</key>
+	<string>laye</string>
+	<key>uuid</key>
+	<string>C464B59D-91BF-4D50-9844-06865BA0E036</string>
+</dict>
+</plist>

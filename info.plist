@@ -128,11 +128,38 @@
                     <string>DAD9400E-D916-43FE-8086-A39C42AF3C08</string>
                     <string>0F94274B-7366-4463-9477-196FC20A69DF</string>
                     <string>------------------------------------</string>
-                    
+                    <string>ED8DEBE6-22B4-414F-9AD0-D434DBD29E71</string>
+                    <string>E80ECEBB-DD33-4761-9059-920EFF480264</string>
+                    <string>280D559A-20AD-4E93-AEF0-41955BC603A1</string>
+                    <string>58DE9378-95A4-4804-98F9-C6856F61CB93</string>
+                    <string>BEE1F967-2FAE-484B-9CF8-F5C51848AB3C</string>
+                    <string>------------------------------------</string>
+                    <string>9C727558-2056-4D52-896D-92D0BF08DF33</string>
+                    <string>4CA3D70A-242B-4D65-BAC7-28736E09DEE5</string>
+                    <string>1350F5E6-D3B9-4448-9AB7-4DFF52116E6F</string>
+                    <string>EC75332A-4FCA-4120-9196-82F6F9B6CA33</string>
+                    <string>------------------------------------</string>
+                    <string>1856EE7E-97AC-44B2-B6C4-E6653DB8E906</string>
                 </array>
                 <key>name</key>
                 <string>Layout</string>
             </dict>
+            
+            <key>1856EE7E-97AC-44B2-B6C4-E6653DB8E906</key>
+            <dict>
+                <key>items</key>
+                <array>
+                    <string>D3B3C0AE-EC1C-4CBF-8EC2-E573AC88DF91</string>
+                    <string>155C2320-2B86-431C-86BC-9FF4C0FB5892</string>
+                    <string>210BB2BA-0F53-4A29-BD9B-E50018D7D227</string>
+                    <string>------------------------------------</string>
+                    <string>C464B59D-91BF-4D50-9844-06865BA0E036</string>
+                    <string>12F3B1C1-3D6B-4A58-BD21-84D9DAC5F65D</string>
+                </array>
+                <key>name</key>
+                <string>Examples</string>
+            </dict>
+            
         </dict>
 
     </dict>

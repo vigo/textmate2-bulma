@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;nav class="level"&gt;
+    &lt;div class="level-left"&gt;
+        &lt;div class="level-item"&gt;Left&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="level-right"&gt;
+        &lt;div class="level-item"&gt;Right&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;</string>
+	<key>name</key>
+	<string>Level - as nav</string>
+	<key>scope</key>
+	<string>text.html</string>
+	<key>tabTrigger</key>
+	<string>lay</string>
+	<key>uuid</key>
+	<string>E80ECEBB-DD33-4761-9059-920EFF480264</string>
+</dict>
+</plist>

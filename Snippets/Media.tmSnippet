@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;div class="media"&gt;
+    &lt;div class="media-left"&gt;
+        Left
+    &lt;/div&gt;
+    &lt;div class="media-content"&gt;
+        &lt;div class="content"&gt;
+            &lt;p&gt;Content&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="media-right"&gt;
+        Right
+    &lt;/div&gt;
+&lt;/div&gt;</string>
+	<key>name</key>
+	<string>Media</string>
+	<key>scope</key>
+	<string>text.html</string>
+	<key>tabTrigger</key>
+	<string>lay</string>
+	<key>uuid</key>
+	<string>9C727558-2056-4D52-896D-92D0BF08DF33</string>
+</dict>
+</plist>
