@@ -3,17 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>&lt;div class="columns"&gt;
-    &lt;div class="column is-11"&gt;is-11&lt;/div&gt;
-    &lt;div class="column"&gt;12&lt;/div&gt;
-&lt;/div&gt;</string>
+	<string>is-vcentered</string>
 	<key>name</key>
-	<string>12 Column - 11</string>
+	<string>Vertical Align Centered</string>
 	<key>scope</key>
 	<string>text.html</string>
 	<key>tabTrigger</key>
-	<string>cole</string>
+	<string>col</string>
 	<key>uuid</key>
-	<string>F46EA343-7C80-4782-ACF6-F8AD82EC9F4C</string>
+	<string>F805E27A-4FF7-4B93-BE3F-804EA2F2E690</string>
 </dict>
 </plist>

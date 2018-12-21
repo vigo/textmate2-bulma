@@ -15,7 +15,7 @@
     &lt;div class="column"&gt;12&lt;/div&gt;
 &lt;/div&gt;</string>
 	<key>name</key>
-	<string>12 Column - 4 - Example</string>
+	<string>12 Column - 4</string>
 	<key>scope</key>
 	<string>text.html</string>
 	<key>tabTrigger</key>

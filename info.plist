@@ -71,7 +71,25 @@
                     <string>BA1FDB2D-1216-40A5-A63B-0E46ECA7C6C6</string>
                     <string>6165E725-0F61-4040-AA55-E1CB7F55CC95</string>
                     <string>------------------------------------</string>
+                    <string>875F066D-730E-4185-82FE-846D35BE8D04</string>
+                    <string>A0283D20-8DC3-44F9-BBA6-7D1905D617D3</string>
+                    <string>F805E27A-4FF7-4B93-BE3F-804EA2F2E690</string>
+                    <string>4EDB5F02-AA24-4FF5-BE60-39461C5B9482</string>
+                    <string>5A4FA4C7-D154-4F18-824F-9399D1B92706</string>
+                    <string>A39EC032-F84F-45E0-AC18-2D8FB13D4FDB</string>
+                    <string>------------------------------------</string>
+                    <string>7BFA9AE4-A2CD-4270-A058-DBC1F0AD00E8</string>
+                </array>
+                <key>name</key>
+                <string>Columns</string>
+            </dict>
+            
+            <key>7BFA9AE4-A2CD-4270-A058-DBC1F0AD00E8</key>
+            <dict>
+                <key>items</key>
+                <array>
                     <string>6310978E-BEB3-4902-B49D-016F1285C67F</string>
+                    <string>58065B86-35AD-4FAA-ADD8-4A47EAFDB1C3</string>
                     <string>FFAC3C8A-6204-4FF4-A090-8F2D98904921</string>
                     <string>5190112E-4885-45CA-900C-B448259D0F65</string>
                     <string>4D3A74AE-D8A4-4263-9C1C-B5203F71ABEF</string>
@@ -90,9 +108,16 @@
                     <string>531A6197-1D53-4C73-BA5A-6F616763CD8E</string>
                     <string>F46EA343-7C80-4782-ACF6-F8AD82EC9F4C</string>
                     <string>9DA8C1A3-D12D-4805-892E-875EA1DC7BE5</string>
+                    <string>------------------------------------</string>
+                    <string>C3BBA9AF-7A2A-4807-A9D2-094974D7E599</string>
+                    <string>F0B0DDE8-8B38-4F90-BE65-76673A4C8970</string>
+                    <string>------------------------------------</string>
+                    <string>3EEDAA90-F0B5-477E-B72F-71AE2BE56CFB</string>
+                    <string>77A79B03-38D4-43E6-8B3D-8C3C3CFBEC5C</string>
+                    <string>2F0E5AD6-9832-4513-89EB-1B1EF40C939B</string>                    
                 </array>
                 <key>name</key>
-                <string>Columns</string>
+                <string>Examples</string>
             </dict>
             
             <key>0E2D52BC-67DA-4A0F-B952-C8CAC49CEF2E</key>
@@ -100,6 +125,10 @@
                 <key>items</key>
                 <array>
                     <string>35CE9981-9B0F-4B57-B1C8-2F02A18AEEB0</string>
+                    <string>DAD9400E-D916-43FE-8086-A39C42AF3C08</string>
+                    <string>0F94274B-7366-4463-9477-196FC20A69DF</string>
+                    <string>------------------------------------</string>
+                    
                 </array>
                 <key>name</key>
                 <string>Layout</string>

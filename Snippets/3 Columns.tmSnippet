@@ -4,17 +4,23 @@
 <dict>
 	<key>content</key>
 	<string>&lt;div class="columns"&gt;
-    &lt;div class="column is-10"&gt;is-10&lt;/div&gt;
-    &lt;div class="column"&gt;11&lt;/div&gt;
-    &lt;div class="column"&gt;12&lt;/div&gt;
+    &lt;div class="column"&gt;
+        First column
+    &lt;/div&gt;
+    &lt;div class="column"&gt;
+        Second column
+    &lt;/div&gt;
+    &lt;div class="column"&gt;
+        Third column
+    &lt;/div&gt;
 &lt;/div&gt;</string>
 	<key>name</key>
-	<string>12 Column - 10</string>
+	<string>3 Columns</string>
 	<key>scope</key>
 	<string>text.html</string>
 	<key>tabTrigger</key>
 	<string>cole</string>
 	<key>uuid</key>
-	<string>531A6197-1D53-4C73-BA5A-6F616763CD8E</string>
+	<string>58065B86-35AD-4FAA-ADD8-4A47EAFDB1C3</string>
 </dict>
 </plist>

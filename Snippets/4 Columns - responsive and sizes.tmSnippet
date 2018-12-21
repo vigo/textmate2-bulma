@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;div class="columns is-${1|mobile,tablet,touch,desktop,widescreen,fullhd|}"&gt;
+    &lt;div class="column is-${2|three-quarters,two-thirds,half,one-third,one-quarter,full,four-fifths,three-fifths,two-fifths,one-fifth|}-${1}"&gt;${1}-${2}&lt;/div&gt;
+    &lt;div class="column"&gt;2&lt;/div&gt;
+    &lt;div class="column"&gt;3&lt;/div&gt;
+    &lt;div class="column"&gt;4&lt;/div&gt;
+&lt;/div&gt;</string>
+	<key>name</key>
+	<string>3 + 1 Columns - responsive and sizes</string>
+	<key>scope</key>
+	<string>text.html</string>
+	<key>tabTrigger</key>
+	<string>cole</string>
+	<key>uuid</key>
+	<string>F0B0DDE8-8B38-4F90-BE65-76673A4C8970</string>
+</dict>
+</plist>

@@ -3,18 +3,16 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>&lt;div class="columns"&gt;
-    &lt;div class="column is-10"&gt;is-10&lt;/div&gt;
-    &lt;div class="column"&gt;11&lt;/div&gt;
-    &lt;div class="column"&gt;12&lt;/div&gt;
+	<string>&lt;div class="container is-fluid"&gt;
+    $0
 &lt;/div&gt;</string>
 	<key>name</key>
-	<string>12 Column - 10</string>
+	<string>Container - Fluid</string>
 	<key>scope</key>
 	<string>text.html</string>
 	<key>tabTrigger</key>
-	<string>cole</string>
+	<string>lay</string>
 	<key>uuid</key>
-	<string>531A6197-1D53-4C73-BA5A-6F616763CD8E</string>
+	<string>DAD9400E-D916-43FE-8086-A39C42AF3C08</string>
 </dict>
 </plist>

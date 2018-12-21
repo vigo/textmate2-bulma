@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;div class="columns is-mobile is-multiline is-centered"&gt;
+    &lt;div class="column is-narrow"&gt;
+        &lt;p class="bd-notification is-primary"&gt;
+            &lt;code class="html"&gt;is-narrow&lt;/code&gt;&lt;br&gt;
+            First Column
+        &lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="column is-narrow"&gt;
+        &lt;p class="bd-notification is-primary"&gt;
+            &lt;code class="html"&gt;is-narrow&lt;/code&gt;&lt;br&gt;
+            Our Second Column
+        &lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="column is-narrow"&gt;
+        &lt;p class="bd-notification is-primary"&gt;
+            &lt;code class="html"&gt;is-narrow&lt;/code&gt;&lt;br&gt;
+            Third Column
+        &lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="column is-narrow"&gt;
+        &lt;p class="bd-notification is-primary"&gt;
+            &lt;code class="html"&gt;is-narrow&lt;/code&gt;&lt;br&gt;
+            The Fourth Column
+        &lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="column is-narrow"&gt;
+        &lt;p class="bd-notification is-primary"&gt;
+            &lt;code class="html"&gt;is-narrow&lt;/code&gt;&lt;br&gt;
+            Fifth Column
+        &lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</string>
+	<key>name</key>
+	<string>Centering Columns</string>
+	<key>scope</key>
+	<string>text.html</string>
+	<key>tabTrigger</key>
+	<string>cole</string>
+	<key>uuid</key>
+	<string>2F0E5AD6-9832-4513-89EB-1B1EF40C939B</string>
+</dict>
+</plist>

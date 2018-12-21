@@ -3,17 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>&lt;div class="columns"&gt;
-    &lt;div class="column is-11"&gt;is-11&lt;/div&gt;
-    &lt;div class="column"&gt;12&lt;/div&gt;
-&lt;/div&gt;</string>
+	<string>is-gapless</string>
 	<key>name</key>
-	<string>12 Column - 11</string>
+	<string>Gapless</string>
 	<key>scope</key>
 	<string>text.html</string>
 	<key>tabTrigger</key>
-	<string>cole</string>
+	<string>col</string>
 	<key>uuid</key>
-	<string>F46EA343-7C80-4782-ACF6-F8AD82EC9F4C</string>
+	<string>875F066D-730E-4185-82FE-846D35BE8D04</string>
 </dict>
 </plist>
