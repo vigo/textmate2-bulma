@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;div class="columns"&gt;
+    &lt;div class="column is-${1|full,three-quarters,two-thirds,half,one-third,one-quarter,four-fifths,three-fifths,two-fifths,one-fifth|}"&gt;is-$1&lt;/div&gt;
+    &lt;div class="column"&gt;Auto&lt;/div&gt;
+    &lt;div class="column"&gt;Auto&lt;/div&gt;
+&lt;/div&gt;</string>
+	<key>name</key>
+	<string>Auto Columns - Example</string>
+	<key>scope</key>
+	<string>text.html</string>
+	<key>tabTrigger</key>
+	<string>cole</string>
+	<key>uuid</key>
+	<string>80F8E676-1BC7-4764-AE61-87CF7A2D2BB1</string>
+</dict>
+</plist>

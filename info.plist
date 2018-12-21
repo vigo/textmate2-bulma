@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>contactEmailRot13</key>
+	<string>hthebmlvyznmry@tznvy.pbz</string>
+	<key>contactName</key>
+	<string>Uğur Özyılmazel</string>
+	<key>description</key>
+	<string>Bulma CSS framework bundle for TextMate. Checkout https://bulma.io</string>
+	<key>name</key>
+	<string>TextMate2 Bulma CSS</string>
+	<key>uuid</key>
+	<string>D5572554-9483-4334-8D3D-88B29EC66D7E</string>
+    <key>mainMenu</key>
+    <dict>
+        <key>items</key>
+        <array>
+            <string>3BB60A94-1215-4755-A76F-061821138628</string>
+            <string>------------------------------------</string>
+            <string>26CBA2E7-E4F5-43F5-8DFD-65F0F3FE4F4B</string>
+            <string>CEBA06B3-DFA7-40FB-A8AB-B9EB837B4143</string>
+            <string>------------------------------------</string>
+            <string>17C3C2AA-38F7-44FA-970C-8CC89673EEFC</string>
+            <string>0E2D52BC-67DA-4A0F-B952-C8CAC49CEF2E</string>
+            <string>------------------------------------</string>
+        </array>
+
+        <key>submenus</key>
+        <dict>
+            <key>26CBA2E7-E4F5-43F5-8DFD-65F0F3FE4F4B</key>
+            <dict>
+                <key>items</key>
+                <array>
+                    <string>6B9D541E-863A-419E-9339-F779055A0235</string>
+                    <string>5E9EE5E7-E1B9-44F4-9FB1-C11CF49815BF</string>
+                </array>
+                <key>name</key>
+                <string>Color Helpers</string>
+            </dict>
+            
+            <key>CEBA06B3-DFA7-40FB-A8AB-B9EB837B4143</key>
+            <dict>
+                <key>items</key>
+                <array>
+                    <string>1DBB3841-5774-42BF-B6B0-172D93615544</string>
+                    <string>C0D46DAD-0F1F-4C16-8B3C-C3694BC127CC</string>
+                    <string>393B913B-9444-4B15-AC4A-6648ED6975A2</string>
+                    <string>32BE7EA4-68DA-4AB1-94D7-377ECCC93D17</string>
+                    <string>14244E7C-57E2-4027-8905-083FC8CBF17A</string>
+                    <string>01216922-B19A-4C4B-88C0-AC97432ADA93</string>
+                    <string>D718E3DC-7870-4349-8AC3-79E551EAB974</string>
+                </array>
+                <key>name</key>
+                <string>Typography Helpers</string>
+            </dict>
+            
+            <key>17C3C2AA-38F7-44FA-970C-8CC89673EEFC</key>
+            <dict>
+                <key>items</key>
+                <array>
+                    <string>287954C5-7FE0-42F0-B23D-E9E3DC389357</string>
+                    <string>1346E31B-8BCD-4428-8012-930D84B87DB9</string>
+                    <string>------------------------------------</string>
+                    <string>89659C8D-6758-4E7C-896A-B7808A160AD0</string>
+                    <string>70239A44-C3DD-4B16-BB36-C24063C8DF75</string>
+                    <string>A684B264-6F83-48B6-8453-460045C4C2EA</string>
+                    <string>23E03F82-DFEA-4DCB-BA4F-EB919F35B500</string>
+                    <string>51CCBF82-6544-46DC-81EF-8C958060307E</string>
+                    <string>------------------------------------</string>
+                    <string>BA1FDB2D-1216-40A5-A63B-0E46ECA7C6C6</string>
+                    <string>6165E725-0F61-4040-AA55-E1CB7F55CC95</string>
+                    <string>------------------------------------</string>
+                    <string>6310978E-BEB3-4902-B49D-016F1285C67F</string>
+                    <string>FFAC3C8A-6204-4FF4-A090-8F2D98904921</string>
+                    <string>5190112E-4885-45CA-900C-B448259D0F65</string>
+                    <string>4D3A74AE-D8A4-4263-9C1C-B5203F71ABEF</string>
+                    <string>------------------------------------</string>
+                    <string>80F8E676-1BC7-4764-AE61-87CF7A2D2BB1</string>
+                    <string>------------------------------------</string>
+                    <string>8669A3A2-66C1-47A2-A15A-876C79502204</string>
+                    <string>2B508DC5-1639-4119-A59D-435DD2B2078E</string>
+                    <string>FB5F492B-F453-4738-AD9C-FEF41FEFC7EF</string>
+                    <string>38A8704E-E40C-44E2-8B89-71CE873A9BFC</string>
+                    <string>F8CED114-5AC2-4252-9299-F8488DCAEA42</string>
+                    <string>92A423DB-D4EA-4F8F-A4BD-ADB7D0E94D4B</string>
+                    <string>8999130C-BA86-408D-ACF7-0808EB6A12B8</string>
+                    <string>F97DC6FA-AF0F-45D6-9EB5-1F179524CC75</string>
+                    <string>12E89213-ED73-444D-A4B1-90BB4C578888</string>
+                    <string>531A6197-1D53-4C73-BA5A-6F616763CD8E</string>
+                    <string>F46EA343-7C80-4782-ACF6-F8AD82EC9F4C</string>
+                    <string>9DA8C1A3-D12D-4805-892E-875EA1DC7BE5</string>
+                </array>
+                <key>name</key>
+                <string>Columns</string>
+            </dict>
+            
+            <key>0E2D52BC-67DA-4A0F-B952-C8CAC49CEF2E</key>
+            <dict>
+                <key>items</key>
+                <array>
+                    <string>35CE9981-9B0F-4B57-B1C8-2F02A18AEEB0</string>
+                </array>
+                <key>name</key>
+                <string>Layout</string>
+            </dict>
+        </dict>
+
+    </dict>
+</dict>
+</plist>
+

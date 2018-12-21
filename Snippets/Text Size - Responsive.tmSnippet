@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>is-size-${1|1,2,3,4,5,6,7|}-${2|mobile,tablet,touch,desktop,widescreen,fullhd|}</string>
+	<key>name</key>
+	<string>Text Size - Responsive</string>
+	<key>scope</key>
+	<string>text.html</string>
+	<key>tabTrigger</key>
+	<string>typ</string>
+	<key>uuid</key>
+	<string>C0D46DAD-0F1F-4C16-8B3C-C3694BC127CC</string>
+</dict>
+</plist>

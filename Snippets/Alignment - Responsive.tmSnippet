@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>has-text-${1|centered,justified,left,right|}-${2|mobile,tablet,tablet-only,touch,desktop,desktop-only,widescreen,widescreen-only,fullhd|}</string>
+	<key>name</key>
+	<string>Alignment - Responsive</string>
+	<key>scope</key>
+	<string>text.html</string>
+	<key>tabTrigger</key>
+	<string>typ</string>
+	<key>uuid</key>
+	<string>32BE7EA4-68DA-4AB1-94D7-377ECCC93D17</string>
+</dict>
+</plist>

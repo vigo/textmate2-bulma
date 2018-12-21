@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>is-${1|three-quarters,two-thirds,half,one-third,one-quarter,full,four-fifths,three-fifths,two-fifths,one-fifth|}</string>
+	<key>name</key>
+	<string>Column sizes</string>
+	<key>scope</key>
+	<string>text.html</string>
+	<key>tabTrigger</key>
+	<string>col</string>
+	<key>uuid</key>
+	<string>A684B264-6F83-48B6-8453-460045C4C2EA</string>
+</dict>
+</plist>

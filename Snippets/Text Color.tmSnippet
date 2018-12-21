@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>has-text-${1|white,black,light,dark,primary,info,link,success,warning,danger,black-bis,black-ter,grey-darker,grey-dark,grey,grey-light,grey-lighter,white-ter,white-bis|}</string>
+	<key>name</key>
+	<string>Text Color</string>
+	<key>scope</key>
+	<string>text.html</string>
+	<key>tabTrigger</key>
+	<string>cl</string>
+	<key>uuid</key>
+	<string>6B9D541E-863A-419E-9339-F779055A0235</string>
+</dict>
+</plist>

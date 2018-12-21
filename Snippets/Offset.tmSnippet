@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>is-offset-${1|three-quarters,two-thirds,half,one-third,one-quarter,full,four-fifths,three-fifths,two-fifths,one-fifth|}</string>
+	<key>name</key>
+	<string>Offset</string>
+	<key>scope</key>
+	<string>text.html</string>
+	<key>tabTrigger</key>
+	<string>col</string>
+	<key>uuid</key>
+	<string>51CCBF82-6544-46DC-81EF-8C958060307E</string>
+</dict>
+</plist>

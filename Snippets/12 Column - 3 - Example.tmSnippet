@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;div class="columns"&gt;
+    &lt;div class="column is-3"&gt;is-3&lt;/div&gt;
+    &lt;div class="column"&gt;4&lt;/div&gt;
+    &lt;div class="column"&gt;5&lt;/div&gt;
+    &lt;div class="column"&gt;6&lt;/div&gt;
+    &lt;div class="column"&gt;7&lt;/div&gt;
+    &lt;div class="column"&gt;8&lt;/div&gt;
+    &lt;div class="column"&gt;9&lt;/div&gt;
+    &lt;div class="column"&gt;10&lt;/div&gt;
+    &lt;div class="column"&gt;11&lt;/div&gt;
+    &lt;div class="column"&gt;12&lt;/div&gt;
+&lt;/div&gt;</string>
+	<key>name</key>
+	<string>12 Column - 3 - Example</string>
+	<key>scope</key>
+	<string>text.html</string>
+	<key>tabTrigger</key>
+	<string>cole</string>
+	<key>uuid</key>
+	<string>FB5F492B-F453-4738-AD9C-FEF41FEFC7EF</string>
+</dict>
+</plist>
