@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;div class="tile is-ancestor"&gt;
+    &lt;div class="tile is-vertical is-8"&gt;
+        &lt;div class="tile"&gt;
+            &lt;div class="tile is-parent is-vertical"&gt;
+                &lt;article class="tile is-child notification is-primary"&gt;
+                    &lt;p class="title"&gt;Vertical...&lt;/p&gt;
+                    &lt;p class="subtitle"&gt;Top tile&lt;/p&gt;
+                &lt;/article&gt;
+
+                &lt;article class="tile is-child notification is-warning"&gt;
+                    &lt;p class="title"&gt;...tiles&lt;/p&gt;
+                    &lt;p class="subtitle"&gt;Bottom tile&lt;/p&gt;
+                &lt;/article&gt;
+            &lt;/div&gt;
+
+            &lt;div class="tile is-parent"&gt;
+                &lt;article class="tile is-child notification is-info"&gt;
+                    &lt;p class="title"&gt;Middle tile&lt;/p&gt;
+                    &lt;p class="subtitle"&gt;With an image&lt;/p&gt;
+                    &lt;figure class="image is-4by3"&gt;
+                        &lt;img src="https://bulma.io/images/placeholders/640x480.png"&gt;
+                    &lt;/figure&gt;
+                &lt;/article&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="tile is-parent"&gt;
+            &lt;article class="tile is-child notification is-danger"&gt;
+                &lt;p class="title"&gt;Wide tile&lt;/p&gt;
+                &lt;p class="subtitle"&gt;Aligned with the right tile&lt;/p&gt;
+                &lt;div class="content"&gt;
+                    &lt;!-- Content --&gt;
+                &lt;/div&gt;
+            &lt;/article&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="tile is-parent"&gt;
+        &lt;article class="tile is-child notification is-success"&gt;
+            &lt;div class="content"&gt;
+                &lt;p class="title"&gt;Tall tile&lt;/p&gt;
+                &lt;p class="subtitle"&gt;With even more content&lt;/p&gt;
+                &lt;div class="content"&gt;
+                    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+                    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/article&gt;
+    &lt;/div&gt;
+&lt;/div&gt;$0</string>
+	<key>name</key>
+	<string>Tiles</string>
+	<key>scope</key>
+	<string>text.html</string>
+	<key>tabTrigger</key>
+	<string>lay</string>
+	<key>uuid</key>
+	<string>80E353F0-8422-456C-A631-D1F2D4AF2094</string>
+</dict>
+</plist>

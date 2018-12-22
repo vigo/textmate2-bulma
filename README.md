@@ -1,4 +1,4 @@
-![Version](https://img.shields.io/badge/version-0.1.0-orange.svg)
+![Version](https://img.shields.io/badge/version-0.1.1-orange.svg)
 ![Bulma](https://img.shields.io/badge/bulma-0.7.2-green.svg)
 ![Fontawesome](https://img.shields.io/badge/fontawesome-5.3.1-green.svg)
 ![Plaftorm](https://img.shields.io/badge/platform-TextMate-blue.svg)
@@ -118,6 +118,9 @@ Covers layout helpers.
 - Level Item, Left/Right
 - Media
 - Media Content, Left/Right
+- Hero variations (*color, gradient, size, three parts etc*)
+- Section
+- Footer
 
 ### `laye`
 
@@ -129,10 +132,15 @@ Level Examples
 - Centered Level
 - Mobile Level
 
-Media Example
+Media Examples
 
 - Tweet
 - Disqus
+
+Tile Examples
+
+- 2 Different titles
+- 3 and 4 Columns
 
 ---
 

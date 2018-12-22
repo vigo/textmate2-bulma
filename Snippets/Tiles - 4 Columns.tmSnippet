@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;div class="tile is-ancestor"&gt;
+    &lt;div class="tile is-parent"&gt;
+        &lt;article class="tile is-child box"&gt;
+            &lt;p class="title"&gt;One&lt;/p&gt;
+            &lt;p class="subtitle"&gt;Subtitle&lt;/p&gt;
+        &lt;/article&gt;
+    &lt;/div&gt;
+    &lt;div class="tile is-parent"&gt;
+        &lt;article class="tile is-child box"&gt;
+            &lt;p class="title"&gt;Two&lt;/p&gt;
+            &lt;p class="subtitle"&gt;Subtitle&lt;/p&gt;
+        &lt;/article&gt;
+    &lt;/div&gt;
+    &lt;div class="tile is-parent"&gt;
+        &lt;article class="tile is-child box"&gt;
+            &lt;p class="title"&gt;Three&lt;/p&gt;
+            &lt;p class="subtitle"&gt;Subtitle&lt;/p&gt;
+        &lt;/article&gt;
+    &lt;/div&gt;
+    &lt;div class="tile is-parent"&gt;
+        &lt;article class="tile is-child box"&gt;
+            &lt;p class="title"&gt;Four&lt;/p&gt;
+            &lt;p class="subtitle"&gt;Subtitle&lt;/p&gt;
+        &lt;/article&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="tile is-ancestor"&gt;
+    &lt;div class="tile is-vertical is-9"&gt;
+        &lt;div class="tile"&gt;
+            &lt;div class="tile is-parent"&gt;
+                &lt;article class="tile is-child box"&gt;
+                    &lt;p class="title"&gt;Five&lt;/p&gt;
+                    &lt;p class="subtitle"&gt;Subtitle&lt;/p&gt;
+                    &lt;div class="content"&gt;
+                        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut. Morbi maximus, leo sit amet vehicula eleifend, nunc dui porta orci, quis semper odio felis ut quam.&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/article&gt;
+            &lt;/div&gt;
+            &lt;div class="tile is-8 is-vertical"&gt;
+                &lt;div class="tile"&gt;
+                    &lt;div class="tile is-parent"&gt;
+                        &lt;article class="tile is-child box"&gt;
+                            &lt;p class="title"&gt;Six&lt;/p&gt;
+                            &lt;p class="subtitle"&gt;Subtitle&lt;/p&gt;
+                        &lt;/article&gt;
+                    &lt;/div&gt;
+                    &lt;div class="tile is-parent"&gt;
+                        &lt;article class="tile is-child box"&gt;
+                            &lt;p class="title"&gt;Seven&lt;/p&gt;
+                            &lt;p class="subtitle"&gt;Subtitle&lt;/p&gt;
+                        &lt;/article&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="tile is-parent"&gt;
+                    &lt;article class="tile is-child box"&gt;
+                        &lt;p class="title"&gt;Eight&lt;/p&gt;
+                        &lt;p class="subtitle"&gt;Subtitle&lt;/p&gt;
+                    &lt;/article&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="tile"&gt;
+            &lt;div class="tile is-8 is-parent"&gt;
+                &lt;article class="tile is-child box"&gt;
+                    &lt;p class="title"&gt;Nine&lt;/p&gt;
+                    &lt;p class="subtitle"&gt;Subtitle&lt;/p&gt;
+                    &lt;div class="content"&gt;
+                        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/article&gt;
+            &lt;/div&gt;
+            &lt;div class="tile is-parent"&gt;
+                &lt;article class="tile is-child box"&gt;
+                    &lt;p class="title"&gt;Ten&lt;/p&gt;
+                    &lt;p class="subtitle"&gt;Subtitle&lt;/p&gt;
+                    &lt;div class="content"&gt;
+                        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/article&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="tile is-parent"&gt;
+        &lt;article class="tile is-child box"&gt;
+            &lt;div class="content"&gt;
+                &lt;p class="title"&gt;Eleven&lt;/p&gt;
+                &lt;p class="subtitle"&gt;Subtitle&lt;/p&gt;
+                &lt;div class="content"&gt;
+                    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut. Morbi maximus, leo sit amet vehicula eleifend, nunc dui porta orci, quis semper odio felis ut quam.&lt;/p&gt;
+                    &lt;p&gt;Integer sollicitudin, tortor a mattis commodo, velit urna rhoncus erat, vitae congue lectus dolor consequat libero. Donec leo ligula, maximus et pellentesque sed, gravida a metus. Cras ullamcorper a nunc ac porta. Aliquam ut aliquet lacus, quis faucibus libero. Quisque non semper leo.&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/article&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="tile is-ancestor"&gt;
+    &lt;div class="tile is-parent"&gt;
+        &lt;article class="tile is-child box"&gt;
+            &lt;p class="title"&gt;Twelve&lt;/p&gt;
+            &lt;p class="subtitle"&gt;Subtitle&lt;/p&gt;
+            &lt;div class="content"&gt;
+                &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/article&gt;
+    &lt;/div&gt;
+    &lt;div class="tile is-parent is-6"&gt;
+        &lt;article class="tile is-child box"&gt;
+            &lt;p class="title"&gt;Thirteen&lt;/p&gt;
+            &lt;p class="subtitle"&gt;Subtitle&lt;/p&gt;
+            &lt;div class="content"&gt;
+                &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/article&gt;
+    &lt;/div&gt;
+    &lt;div class="tile is-parent"&gt;
+        &lt;article class="tile is-child box"&gt;
+            &lt;p class="title"&gt;Fourteen&lt;/p&gt;
+            &lt;p class="subtitle"&gt;Subtitle&lt;/p&gt;
+            &lt;div class="content"&gt;
+                &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/article&gt;
+    &lt;/div&gt;
+&lt;/div&gt;$0</string>
+	<key>name</key>
+	<string>Tiles - 4 Columns</string>
+	<key>scope</key>
+	<string>text.html</string>
+	<key>tabTrigger</key>
+	<string>lay</string>
+	<key>uuid</key>
+	<string>D09B5069-70F9-4307-81CB-67777D8833E1</string>
+</dict>
+</plist>

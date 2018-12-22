@@ -124,25 +124,98 @@
             <dict>
                 <key>items</key>
                 <array>
-                    <string>35CE9981-9B0F-4B57-B1C8-2F02A18AEEB0</string>
-                    <string>DAD9400E-D916-43FE-8086-A39C42AF3C08</string>
-                    <string>0F94274B-7366-4463-9477-196FC20A69DF</string>
-                    <string>------------------------------------</string>
-                    <string>ED8DEBE6-22B4-414F-9AD0-D434DBD29E71</string>
-                    <string>E80ECEBB-DD33-4761-9059-920EFF480264</string>
-                    <string>280D559A-20AD-4E93-AEF0-41955BC603A1</string>
-                    <string>58DE9378-95A4-4804-98F9-C6856F61CB93</string>
-                    <string>BEE1F967-2FAE-484B-9CF8-F5C51848AB3C</string>
-                    <string>------------------------------------</string>
-                    <string>9C727558-2056-4D52-896D-92D0BF08DF33</string>
-                    <string>4CA3D70A-242B-4D65-BAC7-28736E09DEE5</string>
-                    <string>1350F5E6-D3B9-4448-9AB7-4DFF52116E6F</string>
-                    <string>EC75332A-4FCA-4120-9196-82F6F9B6CA33</string>
+                    <string>81351497-00C6-46D2-B19E-055A66E65DAA</string>
+                    <string>9E56B5A1-CA5E-4002-897F-9023CB70435A</string>
+                    <string>04B16B8F-42BC-43FA-943C-41B5A15D0A7D</string>
+                    <string>85C3F4A2-8A1E-40C3-A5DF-833AE0CC0080</string>
+                    <string>E6DEEAE5-913C-4605-AAF1-037ED5B05CDE</string>
+                    <string>CB41BE16-B926-4ADF-BFFD-2F364EEC419F</string>
                     <string>------------------------------------</string>
                     <string>1856EE7E-97AC-44B2-B6C4-E6653DB8E906</string>
                 </array>
                 <key>name</key>
                 <string>Layout</string>
+            </dict>
+            
+            <key>81351497-00C6-46D2-B19E-055A66E65DAA</key>
+            <dict>
+                <key>items</key>
+                <array>
+                    <string>35CE9981-9B0F-4B57-B1C8-2F02A18AEEB0</string>
+                    <string>DAD9400E-D916-43FE-8086-A39C42AF3C08</string>
+                    <string>0F94274B-7366-4463-9477-196FC20A69DF</string>
+                </array>
+                <key>name</key>
+                <string>Container</string>
+            </dict>
+            
+            <key>9E56B5A1-CA5E-4002-897F-9023CB70435A</key>
+            <dict>
+                <key>items</key>
+                <array>
+                    <string>ED8DEBE6-22B4-414F-9AD0-D434DBD29E71</string>
+                    <string>E80ECEBB-DD33-4761-9059-920EFF480264</string>
+                    <string>280D559A-20AD-4E93-AEF0-41955BC603A1</string>
+                    <string>58DE9378-95A4-4804-98F9-C6856F61CB93</string>
+                    <string>BEE1F967-2FAE-484B-9CF8-F5C51848AB3C</string>
+                </array>
+                <key>name</key>
+                <string>Level</string>
+            </dict>
+            
+            <key>04B16B8F-42BC-43FA-943C-41B5A15D0A7D</key>
+            <dict>
+                <key>items</key>
+                <array>
+                    <string>9C727558-2056-4D52-896D-92D0BF08DF33</string>
+                    <string>4CA3D70A-242B-4D65-BAC7-28736E09DEE5</string>
+                    <string>1350F5E6-D3B9-4448-9AB7-4DFF52116E6F</string>
+                    <string>EC75332A-4FCA-4120-9196-82F6F9B6CA33</string>
+                </array>
+                <key>name</key>
+                <string>Media</string>
+            </dict>
+            
+            <key>85C3F4A2-8A1E-40C3-A5DF-833AE0CC0080</key>
+            <dict>
+                <key>items</key>
+                <array>
+                    <string>ED8591D4-1119-49B7-B53B-FCCFEE99194A</string>
+                    <string>38DF3ABF-F921-460A-9F56-DC3F7B21066B</string>
+                    <string>D554D982-DE05-4427-91CA-58A396C929C0</string>
+                    <string>21751563-DB4F-452D-8A84-5AE92D5DED92</string>
+                    <string>54606D49-55C2-44C8-843A-65001091E177</string>
+                    <string>6AAC8890-334A-462B-AC63-4C8FA5912C88</string>
+                    <string>98904060-943D-4E9D-A38B-B3D964C46E9E</string>
+                    <string>AB2FC4CC-E665-4D8D-BDC4-B40034DE67D0</string>
+                    <string>41C6E6E2-5968-40F7-A502-7E91DA6B30E9</string>
+                </array>
+                <key>name</key>
+                <string>Hero</string>
+            </dict>
+            
+            <key>E6DEEAE5-913C-4605-AAF1-037ED5B05CDE</key>
+            <dict>
+                <key>items</key>
+                <array>
+                    <string>E3E63E66-01BE-4284-9D80-89576A3779D0</string>
+                    <string>9A95378D-2B36-4603-A3FB-D00CC50FA343</string>
+                    <string>BCF5A208-9567-4835-BD4E-C7AC3EB9F3AC</string>
+                </array>
+                <key>name</key>
+                <string>Section</string>
+            </dict>
+            
+            <key>CB41BE16-B926-4ADF-BFFD-2F364EEC419F</key>
+            <dict>
+                <key>items</key>
+                <array>
+                    <string>AFB04D67-7D63-4666-B070-6725EEF04C11</string>
+                    <string>4674C981-C0B3-4036-A353-9755D7317890</string>
+                    <string>E00470BF-8662-4D24-8140-FD249A11E555</string>
+                </array>
+                <key>name</key>
+                <string>Footer</string>
             </dict>
             
             <key>1856EE7E-97AC-44B2-B6C4-E6653DB8E906</key>
@@ -155,6 +228,11 @@
                     <string>------------------------------------</string>
                     <string>C464B59D-91BF-4D50-9844-06865BA0E036</string>
                     <string>12F3B1C1-3D6B-4A58-BD21-84D9DAC5F65D</string>
+                    <string>------------------------------------</string>
+                    <string>80E353F0-8422-456C-A631-D1F2D4AF2094</string>
+                    <string>363E91DB-FD93-4D98-9BEE-232907F407AB</string>
+                    <string>80B459F2-C0A5-499A-82B6-A8F6F4464426</string>
+                    <string>D09B5069-70F9-4307-81CB-67777D8833E1</string>
                 </array>
                 <key>name</key>
                 <string>Examples</string>

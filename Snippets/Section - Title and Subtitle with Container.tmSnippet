@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;section class="section"&gt;
+    &lt;div class="container"&gt;
+        &lt;${1|p,div,h1,h2,h3,h4,h5,h6|} class="title"&gt;${2:Title}&lt;/${1}&gt;
+        &lt;${3|p,div,h1,h2,h3,h4,h5,h6|} class="subtitle"&gt;${4:Subtitle}&lt;/${3}&gt;
+    &lt;/div&gt;
+&lt;/section&gt;</string>
+	<key>name</key>
+	<string>Section - Title and Subtitle with Container</string>
+	<key>scope</key>
+	<string>text.html</string>
+	<key>tabTrigger</key>
+	<string>lay</string>
+	<key>uuid</key>
+	<string>BCF5A208-9567-4835-BD4E-C7AC3EB9F3AC</string>
+</dict>
+</plist>

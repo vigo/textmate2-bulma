@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;section class="hero"&gt;
+    &lt;div class="hero-head"&gt;
+        &lt;div class="container"&gt;
+            Header
+        &lt;/div&gt;
+    &lt;/div&gt;
+    
+    &lt;div class="hero-body"&gt;
+        &lt;div class="container"&gt;
+            &lt;h1 class="title"&gt;${1:Title}&lt;/h1&gt;
+            &lt;h2 class="subtitle"&gt;${2:Subtitle}&lt;/h2&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    
+    &lt;div class="hero-foot"&gt;
+        &lt;div class="container"&gt;
+            Footer
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/section&gt;$0</string>
+	<key>name</key>
+	<string>Hero - With 3 Parts</string>
+	<key>scope</key>
+	<string>text.html</string>
+	<key>tabTrigger</key>
+	<string>lay</string>
+	<key>uuid</key>
+	<string>41C6E6E2-5968-40F7-A502-7E91DA6B30E9</string>
+</dict>
+</plist>

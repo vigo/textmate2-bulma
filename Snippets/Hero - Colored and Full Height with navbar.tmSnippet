@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;!-- Example navbar --&gt;
+&lt;nav class="navbar" role="navigation" aria-label="main navigation"&gt;
+    &lt;div class="container"&gt;
+        &lt;div class="navbar-brand"&gt;
+            &lt;a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="hero-and-navbar-example"&gt;
+                &lt;span aria-hidden="true"&gt;&lt;/span&gt;
+                &lt;span aria-hidden="true"&gt;&lt;/span&gt;
+                &lt;span aria-hidden="true"&gt;&lt;/span&gt;
+            &lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div id="hero-and-navbar-example" class="navbar-menu"&gt;
+            &lt;div class="navbar-start"&gt;
+                &lt;a class="navbar-item"&gt;Link 1&lt;/a&gt;
+                &lt;a class="navbar-item"&gt;Link 2&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class="navbar-end"&gt;
+                &lt;div class="navbar-item"&gt;
+                    &lt;a class="navbar-item"&gt;Link 3&lt;/a&gt;
+                    &lt;a class="navbar-item"&gt;Link 4&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;
+&lt;!-- Example navbar --&gt;
+
+&lt;section class="hero is-${1|primary,info,success,warning,danger,light,dark|} is-fullheight-with-navbar"&gt;
+    &lt;div class="hero-body"&gt;
+        &lt;div class="container"&gt;
+            &lt;p class="title"&gt;${2:Fullheight hero with navbar}&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/section&gt;$0</string>
+	<key>name</key>
+	<string>Hero - Colored and Full Height with navbar</string>
+	<key>scope</key>
+	<string>text.html</string>
+	<key>tabTrigger</key>
+	<string>lay</string>
+	<key>uuid</key>
+	<string>AB2FC4CC-E665-4D8D-BDC4-B40034DE67D0</string>
+</dict>
+</plist>
