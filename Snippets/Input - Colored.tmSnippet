@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;input class="input is-${1|primary,info,success,warning,danger|}" type="${2|text,password,email,tel|}" placeholder="${3:Place holder}"&gt;$0</string>
+	<key>name</key>
+	<string>Input - Colored</string>
+	<key>scope</key>
+	<string>text.html</string>
+	<key>tabTrigger</key>
+	<string>frm</string>
+	<key>uuid</key>
+	<string>709868FA-FC6D-4E8F-94CF-7E21B585B7DC</string>
+</dict>
+</plist>

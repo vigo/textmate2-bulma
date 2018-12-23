@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;div class="control is-${1|small,medium,large|}"&gt;
+    $0
+&lt;/div&gt;</string>
+	<key>name</key>
+	<string>Control - Sized</string>
+	<key>scope</key>
+	<string>text.html</string>
+	<key>tabTrigger</key>
+	<string>frm</string>
+	<key>uuid</key>
+	<string>B49C09A9-DB48-4567-9986-9B8879EB0DC0</string>
+</dict>
+</plist>

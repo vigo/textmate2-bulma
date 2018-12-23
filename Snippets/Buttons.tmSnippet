@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;div class="buttons are-${1|small,medium,large|}"&gt;
+    &lt;${2|a,button|} class="button"&gt;${3:Button}&lt;/$2&gt;
+    $0
+&lt;/div&gt;</string>
+	<key>name</key>
+	<string>Buttons</string>
+	<key>scope</key>
+	<string>text.html</string>
+	<key>tabTrigger</key>
+	<string>frm</string>
+	<key>uuid</key>
+	<string>F5AEE3DC-0135-4FA2-917B-56E34951DA7C</string>
+</dict>
+</plist>

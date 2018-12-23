@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;div class="field is-grouped"&gt;
+    &lt;div class="control"&gt;
+        $0
+    &lt;/div&gt;
+&lt;/div&gt;</string>
+	<key>name</key>
+	<string>Field - Grouped</string>
+	<key>scope</key>
+	<string>text.html</string>
+	<key>tabTrigger</key>
+	<string>frm</string>
+	<key>uuid</key>
+	<string>E1D5F0D4-6DF5-4183-A1D7-FABF578FE68A</string>
+</dict>
+</plist>

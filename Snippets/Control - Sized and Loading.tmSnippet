@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;div class="control is-${1|small,medium,large|} is-loading"&gt;
+    $0
+&lt;/div&gt;</string>
+	<key>name</key>
+	<string>Control - Sized and Loading</string>
+	<key>scope</key>
+	<string>text.html</string>
+	<key>tabTrigger</key>
+	<string>frm</string>
+	<key>uuid</key>
+	<string>1E5A69C6-4BF8-4F15-AD15-2DD949762BC2</string>
+</dict>
+</plist>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;${1|a,button|} class="button is-${2|white,light,dark,black,text,primary,link,info,success,warning-danger|}"&gt;${3:Button}&lt;/$1&gt;$0</string>
+	<key>name</key>
+	<string>Button - With Colors</string>
+	<key>scope</key>
+	<string>text.html</string>
+	<key>tabTrigger</key>
+	<string>frm</string>
+	<key>uuid</key>
+	<string>2357C80F-610F-40A6-AC3B-5AE472B8E3DE</string>
+</dict>
+</plist>

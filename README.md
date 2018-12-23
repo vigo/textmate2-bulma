@@ -1,4 +1,4 @@
-![Version](https://img.shields.io/badge/version-0.1.1-orange.svg)
+![Version](https://img.shields.io/badge/version-0.1.2-orange.svg)
 ![Bulma](https://img.shields.io/badge/bulma-0.7.2-green.svg)
 ![Fontawesome](https://img.shields.io/badge/fontawesome-5.3.1-green.svg)
 ![Plaftorm](https://img.shields.io/badge/platform-TextMate-blue.svg)
@@ -16,7 +16,7 @@ All the example snippets are borrowed from Bulma’s examples!
 
 ```bash
 $ cd "$HOME/Library/Application Support/TextMate/Bundles/"
-$ git clone https://github.com/vigo/textmate2-bulma.git textmate2-bulma.tmbundle
+$ git clone https://github.com/vigo/textmate2-bulma.git Bulma.tmbundle
 ```
 
 Reload TextMate If It’s needed.
@@ -34,6 +34,7 @@ Reload TextMate If It’s needed.
 | `cole` + <kbd>⇥</kbd> | Column examples                             |
 | `lay` + <kbd>⇥</kbd>  | Layout helper                               |
 | `laye` + <kbd>⇥</kbd> | Layout examples                             |
+| `frm` + <kbd>⇥</kbd>  | Form helpers                                |
 
 ---
 
@@ -60,6 +61,7 @@ Reload TextMate If It’s needed.
 </html>
 ```
 
+---
 
 ### `cl`
 
@@ -68,6 +70,7 @@ Covers text and background colors. Prefixes are:
 - `has-text-`
 - `has-background-`
 
+---
 
 ### `typ`
 
@@ -82,6 +85,7 @@ weights and font family. Prefixes are:
 - `is-` + weights (*bold etc...*)
 - `is-family-` + families (*monospace etc...*)
 
+---
 
 ### `col`
 
@@ -93,6 +97,7 @@ Covers column related snippets and class names.
 - Offset, Gaps, Multiline, Vertical/Horizontal alignment prefixes
 - Narrow column and responsive helpers
 
+---
 
 ### `cole`
 
@@ -107,6 +112,7 @@ Example snippets for column helpers.
 - Multine in a single row for mobile
 - Centerin Colums
 
+---
 
 ### `lay`
 
@@ -121,6 +127,8 @@ Covers layout helpers.
 - Hero variations (*color, gradient, size, three parts etc*)
 - Section
 - Footer
+
+---
 
 ### `laye`
 
@@ -141,6 +149,42 @@ Tile Examples
 
 - 2 Different titles
 - 3 and 4 Columns
+
+---
+
+### `frm`
+
+Covers form helpers
+
+- Control Classes (*label, input etc...*)
+- Field variations
+- Control variations (*sizes, loading etc..*)
+- Input
+- Button
+
+---
+
+### `faw`
+
+Choose Fontawesome icon from list box!
+
+---
+
+### TODO
+
+- Form missing items (*Textarea, Select etc...*)
+- Elements (*Box, Content etc...*)
+- Components (*Breadcrumb, Card etc...*)
+
+---
+
+## Screenshots
+
+<p align="center">
+    <img src="Screenshots/fontawesome.png" width="33%" title="Fontawesome selector" align="top">
+    <img src="Screenshots/form.png" width="33%" title="Form" align="top">
+    <img src="Screenshots/layout.png" width="33%" title="Layout" align="top">
+</p>
 
 ---
 

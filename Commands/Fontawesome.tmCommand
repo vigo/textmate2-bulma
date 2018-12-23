@@ -1,0 +1,1550 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/bin/bash
+[[ -f "${TM_SUPPORT_PATH}/lib/bash_init.sh" ]] &amp;&amp; . "${TM_SUPPORT_PATH}/lib/bash_init.sh"
+
+res=$(osascript &lt;&lt;'AS'
+    tell app "TextMate"
+        activate
+
+        set fonts_list to {\
+            {name: "500px (brands)", value: "fab fa-500px"}, \
+            {name: "Accessible Icon (brands)", value: "fab fa-accessible-icon"}, \
+            {name: "Accusoft (brands)", value: "fab fa-accusoft"}, \
+            {name: "Acquisitions Incorporated (brands)", value: "fab fa-acquisitions-incorporated"}, \
+            {name: "Ad (solid)", value: "fas fa-ad"}, \
+            {name: "Address Book (solid)", value: "fas fa-address-book"}, \
+            {name: "Address Book (regular)", value: "far fa-address-book"}, \
+            {name: "Address Card (solid)", value: "fas fa-address-card"}, \
+            {name: "Address Card (regular)", value: "far fa-address-card"}, \
+            {name: "adjust (solid)", value: "fas fa-adjust"}, \
+            {name: "App.net (brands)", value: "fab fa-adn"}, \
+            {name: "Adobe (brands)", value: "fab fa-adobe"}, \
+            {name: "Adversal (brands)", value: "fab fa-adversal"}, \
+            {name: "affiliatetheme (brands)", value: "fab fa-affiliatetheme"}, \
+            {name: "Air Freshener (solid)", value: "fas fa-air-freshener"}, \
+            {name: "Algolia (brands)", value: "fab fa-algolia"}, \
+            {name: "align-center (solid)", value: "fas fa-align-center"}, \
+            {name: "align-justify (solid)", value: "fas fa-align-justify"}, \
+            {name: "align-left (solid)", value: "fas fa-align-left"}, \
+            {name: "align-right (solid)", value: "fas fa-align-right"}, \
+            {name: "Alipay (brands)", value: "fab fa-alipay"}, \
+            {name: "Allergies (solid)", value: "fas fa-allergies"}, \
+            {name: "Amazon (brands)", value: "fab fa-amazon"}, \
+            {name: "Amazon Pay (brands)", value: "fab fa-amazon-pay"}, \
+            {name: "ambulance (solid)", value: "fas fa-ambulance"}, \
+            {name: "American Sign Language Interpreting (solid)", value: "fas fa-american-sign-language-interpreting"}, \
+            {name: "Amilia (brands)", value: "fab fa-amilia"}, \
+            {name: "Anchor (solid)", value: "fas fa-anchor"}, \
+            {name: "Android (brands)", value: "fab fa-android"}, \
+            {name: "AngelList (brands)", value: "fab fa-angellist"}, \
+            {name: "Angle Double Down (solid)", value: "fas fa-angle-double-down"}, \
+            {name: "Angle Double Left (solid)", value: "fas fa-angle-double-left"}, \
+            {name: "Angle Double Right (solid)", value: "fas fa-angle-double-right"}, \
+            {name: "Angle Double Up (solid)", value: "fas fa-angle-double-up"}, \
+            {name: "angle-down (solid)", value: "fas fa-angle-down"}, \
+            {name: "angle-left (solid)", value: "fas fa-angle-left"}, \
+            {name: "angle-right (solid)", value: "fas fa-angle-right"}, \
+            {name: "angle-up (solid)", value: "fas fa-angle-up"}, \
+            {name: "Angry Face (solid)", value: "fas fa-angry"}, \
+            {name: "Angry Face (regular)", value: "far fa-angry"}, \
+            {name: "Angry Creative (brands)", value: "fab fa-angrycreative"}, \
+            {name: "Angular (brands)", value: "fab fa-angular"}, \
+            {name: "Ankh (solid)", value: "fas fa-ankh"}, \
+            {name: "App Store (brands)", value: "fab fa-app-store"}, \
+            {name: "iOS App Store (brands)", value: "fab fa-app-store-ios"}, \
+            {name: "Apper Systems AB (brands)", value: "fab fa-apper"}, \
+            {name: "Apple (brands)", value: "fab fa-apple"}, \
+            {name: "Fruit Apple (solid)", value: "fas fa-apple-alt"}, \
+            {name: "Apple Pay (brands)", value: "fab fa-apple-pay"}, \
+            {name: "Archive (solid)", value: "fas fa-archive"}, \
+            {name: "Archway (solid)", value: "fas fa-archway"}, \
+            {name: "Alternate Arrow Circle Down (solid)", value: "fas fa-arrow-alt-circle-down"}, \
+            {name: "Alternate Arrow Circle Down (regular)", value: "far fa-arrow-alt-circle-down"}, \
+            {name: "Alternate Arrow Circle Left (solid)", value: "fas fa-arrow-alt-circle-left"}, \
+            {name: "Alternate Arrow Circle Left (regular)", value: "far fa-arrow-alt-circle-left"}, \
+            {name: "Alternate Arrow Circle Right (solid)", value: "fas fa-arrow-alt-circle-right"}, \
+            {name: "Alternate Arrow Circle Right (regular)", value: "far fa-arrow-alt-circle-right"}, \
+            {name: "Alternate Arrow Circle Up (solid)", value: "fas fa-arrow-alt-circle-up"}, \
+            {name: "Alternate Arrow Circle Up (regular)", value: "far fa-arrow-alt-circle-up"}, \
+            {name: "Arrow Circle Down (solid)", value: "fas fa-arrow-circle-down"}, \
+            {name: "Arrow Circle Left (solid)", value: "fas fa-arrow-circle-left"}, \
+            {name: "Arrow Circle Right (solid)", value: "fas fa-arrow-circle-right"}, \
+            {name: "Arrow Circle Up (solid)", value: "fas fa-arrow-circle-up"}, \
+            {name: "arrow-down (solid)", value: "fas fa-arrow-down"}, \
+            {name: "arrow-left (solid)", value: "fas fa-arrow-left"}, \
+            {name: "arrow-right (solid)", value: "fas fa-arrow-right"}, \
+            {name: "arrow-up (solid)", value: "fas fa-arrow-up"}, \
+            {name: "Alternate Arrows (solid)", value: "fas fa-arrows-alt"}, \
+            {name: "Alternate Arrows Horizontal (solid)", value: "fas fa-arrows-alt-h"}, \
+            {name: "Alternate Arrows Vertical (solid)", value: "fas fa-arrows-alt-v"}, \
+            {name: "Artstation (brands)", value: "fab fa-artstation"}, \
+            {name: "Assistive Listening Systems (solid)", value: "fas fa-assistive-listening-systems"}, \
+            {name: "asterisk (solid)", value: "fas fa-asterisk"}, \
+            {name: "Asymmetrik, Ltd. (brands)", value: "fab fa-asymmetrik"}, \
+            {name: "At (solid)", value: "fas fa-at"}, \
+            {name: "Atlas (solid)", value: "fas fa-atlas"}, \
+            {name: "Atlassian (brands)", value: "fab fa-atlassian"}, \
+            {name: "Atom (solid)", value: "fas fa-atom"}, \
+            {name: "Audible (brands)", value: "fab fa-audible"}, \
+            {name: "Audio Description (solid)", value: "fas fa-audio-description"}, \
+            {name: "Autoprefixer (brands)", value: "fab fa-autoprefixer"}, \
+            {name: "avianex (brands)", value: "fab fa-avianex"}, \
+            {name: "Aviato (brands)", value: "fab fa-aviato"}, \
+            {name: "Award (solid)", value: "fas fa-award"}, \
+            {name: "Amazon Web Services (AWS) (brands)", value: "fab fa-aws"}, \
+            {name: "Baby (solid)", value: "fas fa-baby"}, \
+            {name: "Baby Carriage (solid)", value: "fas fa-baby-carriage"}, \
+            {name: "Backspace (solid)", value: "fas fa-backspace"}, \
+            {name: "backward (solid)", value: "fas fa-backward"}, \
+            {name: "Balance Scale (solid)", value: "fas fa-balance-scale"}, \
+            {name: "ban (solid)", value: "fas fa-ban"}, \
+            {name: "Band-Aid (solid)", value: "fas fa-band-aid"}, \
+            {name: "Bandcamp (brands)", value: "fab fa-bandcamp"}, \
+            {name: "barcode (solid)", value: "fas fa-barcode"}, \
+            {name: "Bars (solid)", value: "fas fa-bars"}, \
+            {name: "Baseball Ball (solid)", value: "fas fa-baseball-ball"}, \
+            {name: "Basketball Ball (solid)", value: "fas fa-basketball-ball"}, \
+            {name: "Bath (solid)", value: "fas fa-bath"}, \
+            {name: "Battery Empty (solid)", value: "fas fa-battery-empty"}, \
+            {name: "Battery Full (solid)", value: "fas fa-battery-full"}, \
+            {name: "Battery 1/2 Full (solid)", value: "fas fa-battery-half"}, \
+            {name: "Battery 1/4 Full (solid)", value: "fas fa-battery-quarter"}, \
+            {name: "Battery 3/4 Full (solid)", value: "fas fa-battery-three-quarters"}, \
+            {name: "Bed (solid)", value: "fas fa-bed"}, \
+            {name: "beer (solid)", value: "fas fa-beer"}, \
+            {name: "Behance (brands)", value: "fab fa-behance"}, \
+            {name: "Behance Square (brands)", value: "fab fa-behance-square"}, \
+            {name: "bell (solid)", value: "fas fa-bell"}, \
+            {name: "bell (regular)", value: "far fa-bell"}, \
+            {name: "Bell Slash (solid)", value: "fas fa-bell-slash"}, \
+            {name: "Bell Slash (regular)", value: "far fa-bell-slash"}, \
+            {name: "Bezier Curve (solid)", value: "fas fa-bezier-curve"}, \
+            {name: "Bible (solid)", value: "fas fa-bible"}, \
+            {name: "Bicycle (solid)", value: "fas fa-bicycle"}, \
+            {name: "BIMobject (brands)", value: "fab fa-bimobject"}, \
+            {name: "Binoculars (solid)", value: "fas fa-binoculars"}, \
+            {name: "Biohazard (solid)", value: "fas fa-biohazard"}, \
+            {name: "Birthday Cake (solid)", value: "fas fa-birthday-cake"}, \
+            {name: "Bitbucket (brands)", value: "fab fa-bitbucket"}, \
+            {name: "Bitcoin (brands)", value: "fab fa-bitcoin"}, \
+            {name: "Bity (brands)", value: "fab fa-bity"}, \
+            {name: "Font Awesome Black Tie (brands)", value: "fab fa-black-tie"}, \
+            {name: "BlackBerry (brands)", value: "fab fa-blackberry"}, \
+            {name: "Blender (solid)", value: "fas fa-blender"}, \
+            {name: "Blender Phone (solid)", value: "fas fa-blender-phone"}, \
+            {name: "Blind (solid)", value: "fas fa-blind"}, \
+            {name: "Blog (solid)", value: "fas fa-blog"}, \
+            {name: "Blogger (brands)", value: "fab fa-blogger"}, \
+            {name: "Blogger B (brands)", value: "fab fa-blogger-b"}, \
+            {name: "Bluetooth (brands)", value: "fab fa-bluetooth"}, \
+            {name: "Bluetooth (brands)", value: "fab fa-bluetooth-b"}, \
+            {name: "bold (solid)", value: "fas fa-bold"}, \
+            {name: "Lightning Bolt (solid)", value: "fas fa-bolt"}, \
+            {name: "Bomb (solid)", value: "fas fa-bomb"}, \
+            {name: "Bone (solid)", value: "fas fa-bone"}, \
+            {name: "Bong (solid)", value: "fas fa-bong"}, \
+            {name: "book (solid)", value: "fas fa-book"}, \
+            {name: "Book of the Dead (solid)", value: "fas fa-book-dead"}, \
+            {name: "Book Open (solid)", value: "fas fa-book-open"}, \
+            {name: "Book Reader (solid)", value: "fas fa-book-reader"}, \
+            {name: "bookmark (solid)", value: "fas fa-bookmark"}, \
+            {name: "bookmark (regular)", value: "far fa-bookmark"}, \
+            {name: "Bowling Ball (solid)", value: "fas fa-bowling-ball"}, \
+            {name: "Box (solid)", value: "fas fa-box"}, \
+            {name: "Box Open (solid)", value: "fas fa-box-open"}, \
+            {name: "Boxes (solid)", value: "fas fa-boxes"}, \
+            {name: "Braille (solid)", value: "fas fa-braille"}, \
+            {name: "Brain (solid)", value: "fas fa-brain"}, \
+            {name: "Briefcase (solid)", value: "fas fa-briefcase"}, \
+            {name: "Medical Briefcase (solid)", value: "fas fa-briefcase-medical"}, \
+            {name: "Broadcast Tower (solid)", value: "fas fa-broadcast-tower"}, \
+            {name: "Broom (solid)", value: "fas fa-broom"}, \
+            {name: "Brush (solid)", value: "fas fa-brush"}, \
+            {name: "BTC (brands)", value: "fab fa-btc"}, \
+            {name: "Bug (solid)", value: "fas fa-bug"}, \
+            {name: "Building (solid)", value: "fas fa-building"}, \
+            {name: "Building (regular)", value: "far fa-building"}, \
+            {name: "bullhorn (solid)", value: "fas fa-bullhorn"}, \
+            {name: "Bullseye (solid)", value: "fas fa-bullseye"}, \
+            {name: "Burn (solid)", value: "fas fa-burn"}, \
+            {name: "Büromöbel-Experte GmbH &amp; Co. KG. (brands)", value: "fab fa-buromobelexperte"}, \
+            {name: "Bus (solid)", value: "fas fa-bus"}, \
+            {name: "Bus Alt (solid)", value: "fas fa-bus-alt"}, \
+            {name: "Business Time (solid)", value: "fas fa-business-time"}, \
+            {name: "BuySellAds (brands)", value: "fab fa-buysellads"}, \
+            {name: "Calculator (solid)", value: "fas fa-calculator"}, \
+            {name: "Calendar (solid)", value: "fas fa-calendar"}, \
+            {name: "Calendar (regular)", value: "far fa-calendar"}, \
+            {name: "Alternate Calendar (solid)", value: "fas fa-calendar-alt"}, \
+            {name: "Alternate Calendar (regular)", value: "far fa-calendar-alt"}, \
+            {name: "Calendar Check (solid)", value: "fas fa-calendar-check"}, \
+            {name: "Calendar Check (regular)", value: "far fa-calendar-check"}, \
+            {name: "Calendar with Day Focus (solid)", value: "fas fa-calendar-day"}, \
+            {name: "Calendar Minus (solid)", value: "fas fa-calendar-minus"}, \
+            {name: "Calendar Minus (regular)", value: "far fa-calendar-minus"}, \
+            {name: "Calendar Plus (solid)", value: "fas fa-calendar-plus"}, \
+            {name: "Calendar Plus (regular)", value: "far fa-calendar-plus"}, \
+            {name: "Calendar Times (solid)", value: "fas fa-calendar-times"}, \
+            {name: "Calendar Times (regular)", value: "far fa-calendar-times"}, \
+            {name: "Calendar with Week Focus (solid)", value: "fas fa-calendar-week"}, \
+            {name: "camera (solid)", value: "fas fa-camera"}, \
+            {name: "Retro Camera (solid)", value: "fas fa-camera-retro"}, \
+            {name: "Campground (solid)", value: "fas fa-campground"}, \
+            {name: "Canadian Maple Leaf (brands)", value: "fab fa-canadian-maple-leaf"}, \
+            {name: "Candy Cane (solid)", value: "fas fa-candy-cane"}, \
+            {name: "Cannabis (solid)", value: "fas fa-cannabis"}, \
+            {name: "Capsules (solid)", value: "fas fa-capsules"}, \
+            {name: "Car (solid)", value: "fas fa-car"}, \
+            {name: "Alternate Car (solid)", value: "fas fa-car-alt"}, \
+            {name: "Car Battery (solid)", value: "fas fa-car-battery"}, \
+            {name: "Car Crash (solid)", value: "fas fa-car-crash"}, \
+            {name: "Car Side (solid)", value: "fas fa-car-side"}, \
+            {name: "Caret Down (solid)", value: "fas fa-caret-down"}, \
+            {name: "Caret Left (solid)", value: "fas fa-caret-left"}, \
+            {name: "Caret Right (solid)", value: "fas fa-caret-right"}, \
+            {name: "Caret Square Down (solid)", value: "fas fa-caret-square-down"}, \
+            {name: "Caret Square Down (regular)", value: "far fa-caret-square-down"}, \
+            {name: "Caret Square Left (solid)", value: "fas fa-caret-square-left"}, \
+            {name: "Caret Square Left (regular)", value: "far fa-caret-square-left"}, \
+            {name: "Caret Square Right (solid)", value: "fas fa-caret-square-right"}, \
+            {name: "Caret Square Right (regular)", value: "far fa-caret-square-right"}, \
+            {name: "Caret Square Up (solid)", value: "fas fa-caret-square-up"}, \
+            {name: "Caret Square Up (regular)", value: "far fa-caret-square-up"}, \
+            {name: "Caret Up (solid)", value: "fas fa-caret-up"}, \
+            {name: "Carrot (solid)", value: "fas fa-carrot"}, \
+            {name: "Shopping Cart Arrow Down (solid)", value: "fas fa-cart-arrow-down"}, \
+            {name: "Add to Shopping Cart (solid)", value: "fas fa-cart-plus"}, \
+            {name: "Cash Register (solid)", value: "fas fa-cash-register"}, \
+            {name: "Cat (solid)", value: "fas fa-cat"}, \
+            {name: "Amazon Pay Credit Card (brands)", value: "fab fa-cc-amazon-pay"}, \
+            {name: "American Express Credit Card (brands)", value: "fab fa-cc-amex"}, \
+            {name: "Apple Pay Credit Card (brands)", value: "fab fa-cc-apple-pay"}, \
+            {name: "Diner's Club Credit Card (brands)", value: "fab fa-cc-diners-club"}, \
+            {name: "Discover Credit Card (brands)", value: "fab fa-cc-discover"}, \
+            {name: "JCB Credit Card (brands)", value: "fab fa-cc-jcb"}, \
+            {name: "MasterCard Credit Card (brands)", value: "fab fa-cc-mastercard"}, \
+            {name: "Paypal Credit Card (brands)", value: "fab fa-cc-paypal"}, \
+            {name: "Stripe Credit Card (brands)", value: "fab fa-cc-stripe"}, \
+            {name: "Visa Credit Card (brands)", value: "fab fa-cc-visa"}, \
+            {name: "Centercode (brands)", value: "fab fa-centercode"}, \
+            {name: "Centos (brands)", value: "fab fa-centos"}, \
+            {name: "certificate (solid)", value: "fas fa-certificate"}, \
+            {name: "Chair (solid)", value: "fas fa-chair"}, \
+            {name: "Chalkboard (solid)", value: "fas fa-chalkboard"}, \
+            {name: "Chalkboard Teacher (solid)", value: "fas fa-chalkboard-teacher"}, \
+            {name: "Charging Station (solid)", value: "fas fa-charging-station"}, \
+            {name: "Area Chart (solid)", value: "fas fa-chart-area"}, \
+            {name: "Bar Chart (solid)", value: "fas fa-chart-bar"}, \
+            {name: "Bar Chart (regular)", value: "far fa-chart-bar"}, \
+            {name: "Line Chart (solid)", value: "fas fa-chart-line"}, \
+            {name: "Pie Chart (solid)", value: "fas fa-chart-pie"}, \
+            {name: "Check (solid)", value: "fas fa-check"}, \
+            {name: "Check Circle (solid)", value: "fas fa-check-circle"}, \
+            {name: "Check Circle (regular)", value: "far fa-check-circle"}, \
+            {name: "Check Double (solid)", value: "fas fa-check-double"}, \
+            {name: "Check Square (solid)", value: "fas fa-check-square"}, \
+            {name: "Check Square (regular)", value: "far fa-check-square"}, \
+            {name: "Chess (solid)", value: "fas fa-chess"}, \
+            {name: "Chess Bishop (solid)", value: "fas fa-chess-bishop"}, \
+            {name: "Chess Board (solid)", value: "fas fa-chess-board"}, \
+            {name: "Chess King (solid)", value: "fas fa-chess-king"}, \
+            {name: "Chess Knight (solid)", value: "fas fa-chess-knight"}, \
+            {name: "Chess Pawn (solid)", value: "fas fa-chess-pawn"}, \
+            {name: "Chess Queen (solid)", value: "fas fa-chess-queen"}, \
+            {name: "Chess Rook (solid)", value: "fas fa-chess-rook"}, \
+            {name: "Chevron Circle Down (solid)", value: "fas fa-chevron-circle-down"}, \
+            {name: "Chevron Circle Left (solid)", value: "fas fa-chevron-circle-left"}, \
+            {name: "Chevron Circle Right (solid)", value: "fas fa-chevron-circle-right"}, \
+            {name: "Chevron Circle Up (solid)", value: "fas fa-chevron-circle-up"}, \
+            {name: "chevron-down (solid)", value: "fas fa-chevron-down"}, \
+            {name: "chevron-left (solid)", value: "fas fa-chevron-left"}, \
+            {name: "chevron-right (solid)", value: "fas fa-chevron-right"}, \
+            {name: "chevron-up (solid)", value: "fas fa-chevron-up"}, \
+            {name: "Child (solid)", value: "fas fa-child"}, \
+            {name: "Chrome (brands)", value: "fab fa-chrome"}, \
+            {name: "Church (solid)", value: "fas fa-church"}, \
+            {name: "Circle (solid)", value: "fas fa-circle"}, \
+            {name: "Circle (regular)", value: "far fa-circle"}, \
+            {name: "Circle Notched (solid)", value: "fas fa-circle-notch"}, \
+            {name: "City (solid)", value: "fas fa-city"}, \
+            {name: "Clipboard (solid)", value: "fas fa-clipboard"}, \
+            {name: "Clipboard (regular)", value: "far fa-clipboard"}, \
+            {name: "Clipboard with Check (solid)", value: "fas fa-clipboard-check"}, \
+            {name: "Clipboard List (solid)", value: "fas fa-clipboard-list"}, \
+            {name: "Clock (solid)", value: "fas fa-clock"}, \
+            {name: "Clock (regular)", value: "far fa-clock"}, \
+            {name: "Clone (solid)", value: "fas fa-clone"}, \
+            {name: "Clone (regular)", value: "far fa-clone"}, \
+            {name: "Closed Captioning (solid)", value: "fas fa-closed-captioning"}, \
+            {name: "Closed Captioning (regular)", value: "far fa-closed-captioning"}, \
+            {name: "Cloud (solid)", value: "fas fa-cloud"}, \
+            {name: "Alternate Cloud Download (solid)", value: "fas fa-cloud-download-alt"}, \
+            {name: "Cloud with (a chance of) Meatball (solid)", value: "fas fa-cloud-meatball"}, \
+            {name: "Cloud with Moon (solid)", value: "fas fa-cloud-moon"}, \
+            {name: "Cloud with Moon and Rain (solid)", value: "fas fa-cloud-moon-rain"}, \
+            {name: "Cloud with Rain (solid)", value: "fas fa-cloud-rain"}, \
+            {name: "Cloud with Heavy Showers (solid)", value: "fas fa-cloud-showers-heavy"}, \
+            {name: "Cloud with Sun (solid)", value: "fas fa-cloud-sun"}, \
+            {name: "Cloud with Sun and Rain (solid)", value: "fas fa-cloud-sun-rain"}, \
+            {name: "Alternate Cloud Upload (solid)", value: "fas fa-cloud-upload-alt"}, \
+            {name: "cloudscale.ch (brands)", value: "fab fa-cloudscale"}, \
+            {name: "Cloudsmith (brands)", value: "fab fa-cloudsmith"}, \
+            {name: "cloudversify (brands)", value: "fab fa-cloudversify"}, \
+            {name: "Cocktail (solid)", value: "fas fa-cocktail"}, \
+            {name: "Code (solid)", value: "fas fa-code"}, \
+            {name: "Code Branch (solid)", value: "fas fa-code-branch"}, \
+            {name: "Codepen (brands)", value: "fab fa-codepen"}, \
+            {name: "Codie Pie (brands)", value: "fab fa-codiepie"}, \
+            {name: "Coffee (solid)", value: "fas fa-coffee"}, \
+            {name: "cog (solid)", value: "fas fa-cog"}, \
+            {name: "cogs (solid)", value: "fas fa-cogs"}, \
+            {name: "Coins (solid)", value: "fas fa-coins"}, \
+            {name: "Columns (solid)", value: "fas fa-columns"}, \
+            {name: "comment (solid)", value: "fas fa-comment"}, \
+            {name: "comment (regular)", value: "far fa-comment"}, \
+            {name: "Alternate Comment (solid)", value: "fas fa-comment-alt"}, \
+            {name: "Alternate Comment (regular)", value: "far fa-comment-alt"}, \
+            {name: "Comment Dollar (solid)", value: "fas fa-comment-dollar"}, \
+            {name: "Comment Dots (solid)", value: "fas fa-comment-dots"}, \
+            {name: "Comment Dots (regular)", value: "far fa-comment-dots"}, \
+            {name: "Comment Slash (solid)", value: "fas fa-comment-slash"}, \
+            {name: "comments (solid)", value: "fas fa-comments"}, \
+            {name: "comments (regular)", value: "far fa-comments"}, \
+            {name: "Comments Dollar (solid)", value: "fas fa-comments-dollar"}, \
+            {name: "Compact Disc (solid)", value: "fas fa-compact-disc"}, \
+            {name: "Compass (solid)", value: "fas fa-compass"}, \
+            {name: "Compass (regular)", value: "far fa-compass"}, \
+            {name: "Compress (solid)", value: "fas fa-compress"}, \
+            {name: "Alternate Compress Arrows (solid)", value: "fas fa-compress-arrows-alt"}, \
+            {name: "Concierge Bell (solid)", value: "fas fa-concierge-bell"}, \
+            {name: "Confluence (brands)", value: "fab fa-confluence"}, \
+            {name: "Connect Develop (brands)", value: "fab fa-connectdevelop"}, \
+            {name: "Contao (brands)", value: "fab fa-contao"}, \
+            {name: "Cookie (solid)", value: "fas fa-cookie"}, \
+            {name: "Cookie Bite (solid)", value: "fas fa-cookie-bite"}, \
+            {name: "Copy (solid)", value: "fas fa-copy"}, \
+            {name: "Copy (regular)", value: "far fa-copy"}, \
+            {name: "Copyright (solid)", value: "fas fa-copyright"}, \
+            {name: "Copyright (regular)", value: "far fa-copyright"}, \
+            {name: "Couch (solid)", value: "fas fa-couch"}, \
+            {name: "cPanel (brands)", value: "fab fa-cpanel"}, \
+            {name: "Creative Commons (brands)", value: "fab fa-creative-commons"}, \
+            {name: "Creative Commons Attribution (brands)", value: "fab fa-creative-commons-by"}, \
+            {name: "Creative Commons Noncommercial (brands)", value: "fab fa-creative-commons-nc"}, \
+            {name: "Creative Commons Noncommercial (Euro Sign) (brands)", value: "fab fa-creative-commons-nc-eu"}, \
+            {name: "Creative Commons Noncommercial (Yen Sign) (brands)", value: "fab fa-creative-commons-nc-jp"}, \
+            {name: "Creative Commons No Derivative Works (brands)", value: "fab fa-creative-commons-nd"}, \
+            {name: "Creative Commons Public Domain (brands)", value: "fab fa-creative-commons-pd"}, \
+            {name: "Alternate Creative Commons Public Domain (brands)", value: "fab fa-creative-commons-pd-alt"}, \
+            {name: "Creative Commons Remix (brands)", value: "fab fa-creative-commons-remix"}, \
+            {name: "Creative Commons Share Alike (brands)", value: "fab fa-creative-commons-sa"}, \
+            {name: "Creative Commons Sampling (brands)", value: "fab fa-creative-commons-sampling"}, \
+            {name: "Creative Commons Sampling + (brands)", value: "fab fa-creative-commons-sampling-plus"}, \
+            {name: "Creative Commons Share (brands)", value: "fab fa-creative-commons-share"}, \
+            {name: "Creative Commons CC0 (brands)", value: "fab fa-creative-commons-zero"}, \
+            {name: "Credit Card (solid)", value: "fas fa-credit-card"}, \
+            {name: "Credit Card (regular)", value: "far fa-credit-card"}, \
+            {name: "Critical Role (brands)", value: "fab fa-critical-role"}, \
+            {name: "crop (solid)", value: "fas fa-crop"}, \
+            {name: "Alternate Crop (solid)", value: "fas fa-crop-alt"}, \
+            {name: "Cross (solid)", value: "fas fa-cross"}, \
+            {name: "Crosshairs (solid)", value: "fas fa-crosshairs"}, \
+            {name: "Crow (solid)", value: "fas fa-crow"}, \
+            {name: "Crown (solid)", value: "fas fa-crown"}, \
+            {name: "CSS 3 Logo (brands)", value: "fab fa-css3"}, \
+            {name: "Alternate CSS3 Logo (brands)", value: "fab fa-css3-alt"}, \
+            {name: "Cube (solid)", value: "fas fa-cube"}, \
+            {name: "Cubes (solid)", value: "fas fa-cubes"}, \
+            {name: "Cut (solid)", value: "fas fa-cut"}, \
+            {name: "Cuttlefish (brands)", value: "fab fa-cuttlefish"}, \
+            {name: "Dungeons &amp; Dragons (brands)", value: "fab fa-d-and-d"}, \
+            {name: "D&amp;D Beyond (brands)", value: "fab fa-d-and-d-beyond"}, \
+            {name: "DashCube (brands)", value: "fab fa-dashcube"}, \
+            {name: "Database (solid)", value: "fas fa-database"}, \
+            {name: "Deaf (solid)", value: "fas fa-deaf"}, \
+            {name: "Delicious Logo (brands)", value: "fab fa-delicious"}, \
+            {name: "Democrat (solid)", value: "fas fa-democrat"}, \
+            {name: "deploy.dog (brands)", value: "fab fa-deploydog"}, \
+            {name: "Deskpro (brands)", value: "fab fa-deskpro"}, \
+            {name: "Desktop (solid)", value: "fas fa-desktop"}, \
+            {name: "DEV (brands)", value: "fab fa-dev"}, \
+            {name: "deviantART (brands)", value: "fab fa-deviantart"}, \
+            {name: "Dharmachakra (solid)", value: "fas fa-dharmachakra"}, \
+            {name: "DHL (brands)", value: "fab fa-dhl"}, \
+            {name: "Diagnoses (solid)", value: "fas fa-diagnoses"}, \
+            {name: "Diaspora (brands)", value: "fab fa-diaspora"}, \
+            {name: "Dice (solid)", value: "fas fa-dice"}, \
+            {name: "Dice D20 (solid)", value: "fas fa-dice-d20"}, \
+            {name: "Dice D6 (solid)", value: "fas fa-dice-d6"}, \
+            {name: "Dice Five (solid)", value: "fas fa-dice-five"}, \
+            {name: "Dice Four (solid)", value: "fas fa-dice-four"}, \
+            {name: "Dice One (solid)", value: "fas fa-dice-one"}, \
+            {name: "Dice Six (solid)", value: "fas fa-dice-six"}, \
+            {name: "Dice Three (solid)", value: "fas fa-dice-three"}, \
+            {name: "Dice Two (solid)", value: "fas fa-dice-two"}, \
+            {name: "Digg Logo (brands)", value: "fab fa-digg"}, \
+            {name: "Digital Ocean (brands)", value: "fab fa-digital-ocean"}, \
+            {name: "Digital Tachograph (solid)", value: "fas fa-digital-tachograph"}, \
+            {name: "Directions (solid)", value: "fas fa-directions"}, \
+            {name: "Discord (brands)", value: "fab fa-discord"}, \
+            {name: "Discourse (brands)", value: "fab fa-discourse"}, \
+            {name: "Divide (solid)", value: "fas fa-divide"}, \
+            {name: "Dizzy Face (solid)", value: "fas fa-dizzy"}, \
+            {name: "Dizzy Face (regular)", value: "far fa-dizzy"}, \
+            {name: "DNA (solid)", value: "fas fa-dna"}, \
+            {name: "DocHub (brands)", value: "fab fa-dochub"}, \
+            {name: "Docker (brands)", value: "fab fa-docker"}, \
+            {name: "Dog (solid)", value: "fas fa-dog"}, \
+            {name: "Dollar Sign (solid)", value: "fas fa-dollar-sign"}, \
+            {name: "Dolly (solid)", value: "fas fa-dolly"}, \
+            {name: "Dolly Flatbed (solid)", value: "fas fa-dolly-flatbed"}, \
+            {name: "Donate (solid)", value: "fas fa-donate"}, \
+            {name: "Door Closed (solid)", value: "fas fa-door-closed"}, \
+            {name: "Door Open (solid)", value: "fas fa-door-open"}, \
+            {name: "Dot Circle (solid)", value: "fas fa-dot-circle"}, \
+            {name: "Dot Circle (regular)", value: "far fa-dot-circle"}, \
+            {name: "Dove (solid)", value: "fas fa-dove"}, \
+            {name: "Download (solid)", value: "fas fa-download"}, \
+            {name: "Draft2digital (brands)", value: "fab fa-draft2digital"}, \
+            {name: "Drafting Compass (solid)", value: "fas fa-drafting-compass"}, \
+            {name: "Dragon (solid)", value: "fas fa-dragon"}, \
+            {name: "Draw Polygon (solid)", value: "fas fa-draw-polygon"}, \
+            {name: "Dribbble (brands)", value: "fab fa-dribbble"}, \
+            {name: "Dribbble Square (brands)", value: "fab fa-dribbble-square"}, \
+            {name: "Dropbox (brands)", value: "fab fa-dropbox"}, \
+            {name: "Drum (solid)", value: "fas fa-drum"}, \
+            {name: "Drum Steelpan (solid)", value: "fas fa-drum-steelpan"}, \
+            {name: "Drumstick with Bite Taken Out (solid)", value: "fas fa-drumstick-bite"}, \
+            {name: "Drupal Logo (brands)", value: "fab fa-drupal"}, \
+            {name: "Dumbbell (solid)", value: "fas fa-dumbbell"}, \
+            {name: "Dumpster (solid)", value: "fas fa-dumpster"}, \
+            {name: "Dumpster Fire (solid)", value: "fas fa-dumpster-fire"}, \
+            {name: "Dungeon (solid)", value: "fas fa-dungeon"}, \
+            {name: "Dyalog (brands)", value: "fab fa-dyalog"}, \
+            {name: "Earlybirds (brands)", value: "fab fa-earlybirds"}, \
+            {name: "eBay (brands)", value: "fab fa-ebay"}, \
+            {name: "Edge Browser (brands)", value: "fab fa-edge"}, \
+            {name: "Edit (solid)", value: "fas fa-edit"}, \
+            {name: "Edit (regular)", value: "far fa-edit"}, \
+            {name: "eject (solid)", value: "fas fa-eject"}, \
+            {name: "Elementor (brands)", value: "fab fa-elementor"}, \
+            {name: "Horizontal Ellipsis (solid)", value: "fas fa-ellipsis-h"}, \
+            {name: "Vertical Ellipsis (solid)", value: "fas fa-ellipsis-v"}, \
+            {name: "Ello (brands)", value: "fab fa-ello"}, \
+            {name: "Ember (brands)", value: "fab fa-ember"}, \
+            {name: "Galactic Empire (brands)", value: "fab fa-empire"}, \
+            {name: "Envelope (solid)", value: "fas fa-envelope"}, \
+            {name: "Envelope (regular)", value: "far fa-envelope"}, \
+            {name: "Envelope Open (solid)", value: "fas fa-envelope-open"}, \
+            {name: "Envelope Open (regular)", value: "far fa-envelope-open"}, \
+            {name: "Envelope Open-text (solid)", value: "fas fa-envelope-open-text"}, \
+            {name: "Envelope Square (solid)", value: "fas fa-envelope-square"}, \
+            {name: "Envira Gallery (brands)", value: "fab fa-envira"}, \
+            {name: "Equals (solid)", value: "fas fa-equals"}, \
+            {name: "eraser (solid)", value: "fas fa-eraser"}, \
+            {name: "Erlang (brands)", value: "fab fa-erlang"}, \
+            {name: "Ethereum (brands)", value: "fab fa-ethereum"}, \
+            {name: "Ethernet (solid)", value: "fas fa-ethernet"}, \
+            {name: "Etsy (brands)", value: "fab fa-etsy"}, \
+            {name: "Euro Sign (solid)", value: "fas fa-euro-sign"}, \
+            {name: "Alternate Exchange (solid)", value: "fas fa-exchange-alt"}, \
+            {name: "exclamation (solid)", value: "fas fa-exclamation"}, \
+            {name: "Exclamation Circle (solid)", value: "fas fa-exclamation-circle"}, \
+            {name: "Exclamation Triangle (solid)", value: "fas fa-exclamation-triangle"}, \
+            {name: "Expand (solid)", value: "fas fa-expand"}, \
+            {name: "Alternate Expand Arrows (solid)", value: "fas fa-expand-arrows-alt"}, \
+            {name: "ExpeditedSSL (brands)", value: "fab fa-expeditedssl"}, \
+            {name: "Alternate External Link (solid)", value: "fas fa-external-link-alt"}, \
+            {name: "Alternate External Link Square (solid)", value: "fas fa-external-link-square-alt"}, \
+            {name: "Eye (solid)", value: "fas fa-eye"}, \
+            {name: "Eye (regular)", value: "far fa-eye"}, \
+            {name: "Eye Dropper (solid)", value: "fas fa-eye-dropper"}, \
+            {name: "Eye Slash (solid)", value: "fas fa-eye-slash"}, \
+            {name: "Eye Slash (regular)", value: "far fa-eye-slash"}, \
+            {name: "Facebook (brands)", value: "fab fa-facebook"}, \
+            {name: "Facebook F (brands)", value: "fab fa-facebook-f"}, \
+            {name: "Facebook Messenger (brands)", value: "fab fa-facebook-messenger"}, \
+            {name: "Facebook Square (brands)", value: "fab fa-facebook-square"}, \
+            {name: "Fantasy Flight-games (brands)", value: "fab fa-fantasy-flight-games"}, \
+            {name: "fast-backward (solid)", value: "fas fa-fast-backward"}, \
+            {name: "fast-forward (solid)", value: "fas fa-fast-forward"}, \
+            {name: "Fax (solid)", value: "fas fa-fax"}, \
+            {name: "Feather (solid)", value: "fas fa-feather"}, \
+            {name: "Alternate Feather (solid)", value: "fas fa-feather-alt"}, \
+            {name: "FedEx (brands)", value: "fab fa-fedex"}, \
+            {name: "Fedora (brands)", value: "fab fa-fedora"}, \
+            {name: "Female (solid)", value: "fas fa-female"}, \
+            {name: "fighter-jet (solid)", value: "fas fa-fighter-jet"}, \
+            {name: "Figma (brands)", value: "fab fa-figma"}, \
+            {name: "File (solid)", value: "fas fa-file"}, \
+            {name: "File (regular)", value: "far fa-file"}, \
+            {name: "Alternate File (solid)", value: "fas fa-file-alt"}, \
+            {name: "Alternate File (regular)", value: "far fa-file-alt"}, \
+            {name: "Archive File (solid)", value: "fas fa-file-archive"}, \
+            {name: "Archive File (regular)", value: "far fa-file-archive"}, \
+            {name: "Audio File (solid)", value: "fas fa-file-audio"}, \
+            {name: "Audio File (regular)", value: "far fa-file-audio"}, \
+            {name: "Code File (solid)", value: "fas fa-file-code"}, \
+            {name: "Code File (regular)", value: "far fa-file-code"}, \
+            {name: "File Contract (solid)", value: "fas fa-file-contract"}, \
+            {name: "File CSV (solid)", value: "fas fa-file-csv"}, \
+            {name: "File Download (solid)", value: "fas fa-file-download"}, \
+            {name: "Excel File (solid)", value: "fas fa-file-excel"}, \
+            {name: "Excel File (regular)", value: "far fa-file-excel"}, \
+            {name: "File Export (solid)", value: "fas fa-file-export"}, \
+            {name: "Image File (solid)", value: "fas fa-file-image"}, \
+            {name: "Image File (regular)", value: "far fa-file-image"}, \
+            {name: "File Import (solid)", value: "fas fa-file-import"}, \
+            {name: "File Invoice (solid)", value: "fas fa-file-invoice"}, \
+            {name: "File Invoice with US Dollar (solid)", value: "fas fa-file-invoice-dollar"}, \
+            {name: "Medical File (solid)", value: "fas fa-file-medical"}, \
+            {name: "Alternate Medical File (solid)", value: "fas fa-file-medical-alt"}, \
+            {name: "PDF File (solid)", value: "fas fa-file-pdf"}, \
+            {name: "PDF File (regular)", value: "far fa-file-pdf"}, \
+            {name: "Powerpoint File (solid)", value: "fas fa-file-powerpoint"}, \
+            {name: "Powerpoint File (regular)", value: "far fa-file-powerpoint"}, \
+            {name: "File Prescription (solid)", value: "fas fa-file-prescription"}, \
+            {name: "File Signature (solid)", value: "fas fa-file-signature"}, \
+            {name: "File Upload (solid)", value: "fas fa-file-upload"}, \
+            {name: "Video File (solid)", value: "fas fa-file-video"}, \
+            {name: "Video File (regular)", value: "far fa-file-video"}, \
+            {name: "Word File (solid)", value: "fas fa-file-word"}, \
+            {name: "Word File (regular)", value: "far fa-file-word"}, \
+            {name: "Fill (solid)", value: "fas fa-fill"}, \
+            {name: "Fill Drip (solid)", value: "fas fa-fill-drip"}, \
+            {name: "Film (solid)", value: "fas fa-film"}, \
+            {name: "Filter (solid)", value: "fas fa-filter"}, \
+            {name: "Fingerprint (solid)", value: "fas fa-fingerprint"}, \
+            {name: "fire (solid)", value: "fas fa-fire"}, \
+            {name: "Alternate Fire (solid)", value: "fas fa-fire-alt"}, \
+            {name: "fire-extinguisher (solid)", value: "fas fa-fire-extinguisher"}, \
+            {name: "Firefox (brands)", value: "fab fa-firefox"}, \
+            {name: "First Aid (solid)", value: "fas fa-first-aid"}, \
+            {name: "First Order (brands)", value: "fab fa-first-order"}, \
+            {name: "Alternate First Order (brands)", value: "fab fa-first-order-alt"}, \
+            {name: "firstdraft (brands)", value: "fab fa-firstdraft"}, \
+            {name: "Fish (solid)", value: "fas fa-fish"}, \
+            {name: "Raised Fist (solid)", value: "fas fa-fist-raised"}, \
+            {name: "flag (solid)", value: "fas fa-flag"}, \
+            {name: "flag (regular)", value: "far fa-flag"}, \
+            {name: "flag-checkered (solid)", value: "fas fa-flag-checkered"}, \
+            {name: "United States of America Flag (solid)", value: "fas fa-flag-usa"}, \
+            {name: "Flask (solid)", value: "fas fa-flask"}, \
+            {name: "Flickr (brands)", value: "fab fa-flickr"}, \
+            {name: "Flipboard (brands)", value: "fab fa-flipboard"}, \
+            {name: "Flushed Face (solid)", value: "fas fa-flushed"}, \
+            {name: "Flushed Face (regular)", value: "far fa-flushed"}, \
+            {name: "Fly (brands)", value: "fab fa-fly"}, \
+            {name: "Folder (solid)", value: "fas fa-folder"}, \
+            {name: "Folder (regular)", value: "far fa-folder"}, \
+            {name: "Folder Minus (solid)", value: "fas fa-folder-minus"}, \
+            {name: "Folder Open (solid)", value: "fas fa-folder-open"}, \
+            {name: "Folder Open (regular)", value: "far fa-folder-open"}, \
+            {name: "Folder Plus (solid)", value: "fas fa-folder-plus"}, \
+            {name: "font (solid)", value: "fas fa-font"}, \
+            {name: "Font Awesome (brands)", value: "fab fa-font-awesome"}, \
+            {name: "Alternate Font Awesome (brands)", value: "fab fa-font-awesome-alt"}, \
+            {name: "Font Awesome Flag (brands)", value: "fab fa-font-awesome-flag"}, \
+            {name: "Font Awesome Full Logo (regular)", value: "far fa-font-awesome-logo-full"}, \
+            {name: "Font Awesome Full Logo (solid)", value: "fas fa-font-awesome-logo-full"}, \
+            {name: "Font Awesome Full Logo (brands)", value: "fab fa-font-awesome-logo-full"}, \
+            {name: "Fonticons (brands)", value: "fab fa-fonticons"}, \
+            {name: "Fonticons Fi (brands)", value: "fab fa-fonticons-fi"}, \
+            {name: "Football Ball (solid)", value: "fas fa-football-ball"}, \
+            {name: "Fort Awesome (brands)", value: "fab fa-fort-awesome"}, \
+            {name: "Alternate Fort Awesome (brands)", value: "fab fa-fort-awesome-alt"}, \
+            {name: "Forumbee (brands)", value: "fab fa-forumbee"}, \
+            {name: "forward (solid)", value: "fas fa-forward"}, \
+            {name: "Foursquare (brands)", value: "fab fa-foursquare"}, \
+            {name: "Free Code Camp (brands)", value: "fab fa-free-code-camp"}, \
+            {name: "FreeBSD (brands)", value: "fab fa-freebsd"}, \
+            {name: "Frog (solid)", value: "fas fa-frog"}, \
+            {name: "Frowning Face (solid)", value: "fas fa-frown"}, \
+            {name: "Frowning Face (regular)", value: "far fa-frown"}, \
+            {name: "Frowning Face With Open Mouth (solid)", value: "fas fa-frown-open"}, \
+            {name: "Frowning Face With Open Mouth (regular)", value: "far fa-frown-open"}, \
+            {name: "Fulcrum (brands)", value: "fab fa-fulcrum"}, \
+            {name: "Funnel Dollar (solid)", value: "fas fa-funnel-dollar"}, \
+            {name: "Futbol (solid)", value: "fas fa-futbol"}, \
+            {name: "Futbol (regular)", value: "far fa-futbol"}, \
+            {name: "Galactic Republic (brands)", value: "fab fa-galactic-republic"}, \
+            {name: "Galactic Senate (brands)", value: "fab fa-galactic-senate"}, \
+            {name: "Gamepad (solid)", value: "fas fa-gamepad"}, \
+            {name: "Gas Pump (solid)", value: "fas fa-gas-pump"}, \
+            {name: "Gavel (solid)", value: "fas fa-gavel"}, \
+            {name: "Gem (solid)", value: "fas fa-gem"}, \
+            {name: "Gem (regular)", value: "far fa-gem"}, \
+            {name: "Genderless (solid)", value: "fas fa-genderless"}, \
+            {name: "Get Pocket (brands)", value: "fab fa-get-pocket"}, \
+            {name: "GG Currency (brands)", value: "fab fa-gg"}, \
+            {name: "GG Currency Circle (brands)", value: "fab fa-gg-circle"}, \
+            {name: "Ghost (solid)", value: "fas fa-ghost"}, \
+            {name: "gift (solid)", value: "fas fa-gift"}, \
+            {name: "Gifts (solid)", value: "fas fa-gifts"}, \
+            {name: "Git (brands)", value: "fab fa-git"}, \
+            {name: "Git Square (brands)", value: "fab fa-git-square"}, \
+            {name: "GitHub (brands)", value: "fab fa-github"}, \
+            {name: "Alternate GitHub (brands)", value: "fab fa-github-alt"}, \
+            {name: "GitHub Square (brands)", value: "fab fa-github-square"}, \
+            {name: "GitKraken (brands)", value: "fab fa-gitkraken"}, \
+            {name: "GitLab (brands)", value: "fab fa-gitlab"}, \
+            {name: "Gitter (brands)", value: "fab fa-gitter"}, \
+            {name: "Glass Cheers (solid)", value: "fas fa-glass-cheers"}, \
+            {name: "Martini Glass (solid)", value: "fas fa-glass-martini"}, \
+            {name: "Alternate Glass Martini (solid)", value: "fas fa-glass-martini-alt"}, \
+            {name: "Glass Whiskey (solid)", value: "fas fa-glass-whiskey"}, \
+            {name: "Glasses (solid)", value: "fas fa-glasses"}, \
+            {name: "Glide (brands)", value: "fab fa-glide"}, \
+            {name: "Glide G (brands)", value: "fab fa-glide-g"}, \
+            {name: "Globe (solid)", value: "fas fa-globe"}, \
+            {name: "Globe with Africa shown (solid)", value: "fas fa-globe-africa"}, \
+            {name: "Globe with Americas shown (solid)", value: "fas fa-globe-americas"}, \
+            {name: "Globe with Asia shown (solid)", value: "fas fa-globe-asia"}, \
+            {name: "Globe with Europe shown (solid)", value: "fas fa-globe-europe"}, \
+            {name: "Gofore (brands)", value: "fab fa-gofore"}, \
+            {name: "Golf Ball (solid)", value: "fas fa-golf-ball"}, \
+            {name: "Goodreads (brands)", value: "fab fa-goodreads"}, \
+            {name: "Goodreads G (brands)", value: "fab fa-goodreads-g"}, \
+            {name: "Google Logo (brands)", value: "fab fa-google"}, \
+            {name: "Google Drive (brands)", value: "fab fa-google-drive"}, \
+            {name: "Google Play (brands)", value: "fab fa-google-play"}, \
+            {name: "Google Plus (brands)", value: "fab fa-google-plus"}, \
+            {name: "Google Plus G (brands)", value: "fab fa-google-plus-g"}, \
+            {name: "Google Plus Square (brands)", value: "fab fa-google-plus-square"}, \
+            {name: "Google Wallet (brands)", value: "fab fa-google-wallet"}, \
+            {name: "Gopuram (solid)", value: "fas fa-gopuram"}, \
+            {name: "Graduation Cap (solid)", value: "fas fa-graduation-cap"}, \
+            {name: "Gratipay (Gittip) (brands)", value: "fab fa-gratipay"}, \
+            {name: "Grav (brands)", value: "fab fa-grav"}, \
+            {name: "Greater Than (solid)", value: "fas fa-greater-than"}, \
+            {name: "Greater Than Equal To (solid)", value: "fas fa-greater-than-equal"}, \
+            {name: "Grimacing Face (solid)", value: "fas fa-grimace"}, \
+            {name: "Grimacing Face (regular)", value: "far fa-grimace"}, \
+            {name: "Grinning Face (solid)", value: "fas fa-grin"}, \
+            {name: "Grinning Face (regular)", value: "far fa-grin"}, \
+            {name: "Alternate Grinning Face (solid)", value: "fas fa-grin-alt"}, \
+            {name: "Alternate Grinning Face (regular)", value: "far fa-grin-alt"}, \
+            {name: "Grinning Face With Smiling Eyes (solid)", value: "fas fa-grin-beam"}, \
+            {name: "Grinning Face With Smiling Eyes (regular)", value: "far fa-grin-beam"}, \
+            {name: "Grinning Face With Sweat (solid)", value: "fas fa-grin-beam-sweat"}, \
+            {name: "Grinning Face With Sweat (regular)", value: "far fa-grin-beam-sweat"}, \
+            {name: "Smiling Face With Heart-Eyes (solid)", value: "fas fa-grin-hearts"}, \
+            {name: "Smiling Face With Heart-Eyes (regular)", value: "far fa-grin-hearts"}, \
+            {name: "Grinning Squinting Face (solid)", value: "fas fa-grin-squint"}, \
+            {name: "Grinning Squinting Face (regular)", value: "far fa-grin-squint"}, \
+            {name: "Rolling on the Floor Laughing (solid)", value: "fas fa-grin-squint-tears"}, \
+            {name: "Rolling on the Floor Laughing (regular)", value: "far fa-grin-squint-tears"}, \
+            {name: "Star-Struck (solid)", value: "fas fa-grin-stars"}, \
+            {name: "Star-Struck (regular)", value: "far fa-grin-stars"}, \
+            {name: "Face With Tears of Joy (solid)", value: "fas fa-grin-tears"}, \
+            {name: "Face With Tears of Joy (regular)", value: "far fa-grin-tears"}, \
+            {name: "Face With Tongue (solid)", value: "fas fa-grin-tongue"}, \
+            {name: "Face With Tongue (regular)", value: "far fa-grin-tongue"}, \
+            {name: "Squinting Face With Tongue (solid)", value: "fas fa-grin-tongue-squint"}, \
+            {name: "Squinting Face With Tongue (regular)", value: "far fa-grin-tongue-squint"}, \
+            {name: "Winking Face With Tongue (solid)", value: "fas fa-grin-tongue-wink"}, \
+            {name: "Winking Face With Tongue (regular)", value: "far fa-grin-tongue-wink"}, \
+            {name: "Grinning Winking Face (solid)", value: "fas fa-grin-wink"}, \
+            {name: "Grinning Winking Face (regular)", value: "far fa-grin-wink"}, \
+            {name: "Grip Horizontal (solid)", value: "fas fa-grip-horizontal"}, \
+            {name: "Grip Lines (solid)", value: "fas fa-grip-lines"}, \
+            {name: "Grip Lines Vertical (solid)", value: "fas fa-grip-lines-vertical"}, \
+            {name: "Grip Vertical (solid)", value: "fas fa-grip-vertical"}, \
+            {name: "Gripfire, Inc. (brands)", value: "fab fa-gripfire"}, \
+            {name: "Grunt (brands)", value: "fab fa-grunt"}, \
+            {name: "Guitar (solid)", value: "fas fa-guitar"}, \
+            {name: "Gulp (brands)", value: "fab fa-gulp"}, \
+            {name: "H Square (solid)", value: "fas fa-h-square"}, \
+            {name: "Hacker News (brands)", value: "fab fa-hacker-news"}, \
+            {name: "Hacker News Square (brands)", value: "fab fa-hacker-news-square"}, \
+            {name: "Hackerrank (brands)", value: "fab fa-hackerrank"}, \
+            {name: "Hammer (solid)", value: "fas fa-hammer"}, \
+            {name: "Hamsa (solid)", value: "fas fa-hamsa"}, \
+            {name: "Hand Holding (solid)", value: "fas fa-hand-holding"}, \
+            {name: "Hand Holding Heart (solid)", value: "fas fa-hand-holding-heart"}, \
+            {name: "Hand Holding US Dollar (solid)", value: "fas fa-hand-holding-usd"}, \
+            {name: "Lizard (Hand) (solid)", value: "fas fa-hand-lizard"}, \
+            {name: "Lizard (Hand) (regular)", value: "far fa-hand-lizard"}, \
+            {name: "Paper (Hand) (solid)", value: "fas fa-hand-paper"}, \
+            {name: "Paper (Hand) (regular)", value: "far fa-hand-paper"}, \
+            {name: "Peace (Hand) (solid)", value: "fas fa-hand-peace"}, \
+            {name: "Peace (Hand) (regular)", value: "far fa-hand-peace"}, \
+            {name: "Hand Pointing Down (solid)", value: "fas fa-hand-point-down"}, \
+            {name: "Hand Pointing Down (regular)", value: "far fa-hand-point-down"}, \
+            {name: "Hand Pointing Left (solid)", value: "fas fa-hand-point-left"}, \
+            {name: "Hand Pointing Left (regular)", value: "far fa-hand-point-left"}, \
+            {name: "Hand Pointing Right (solid)", value: "fas fa-hand-point-right"}, \
+            {name: "Hand Pointing Right (regular)", value: "far fa-hand-point-right"}, \
+            {name: "Hand Pointing Up (solid)", value: "fas fa-hand-point-up"}, \
+            {name: "Hand Pointing Up (regular)", value: "far fa-hand-point-up"}, \
+            {name: "Pointer (Hand) (solid)", value: "fas fa-hand-pointer"}, \
+            {name: "Pointer (Hand) (regular)", value: "far fa-hand-pointer"}, \
+            {name: "Rock (Hand) (solid)", value: "fas fa-hand-rock"}, \
+            {name: "Rock (Hand) (regular)", value: "far fa-hand-rock"}, \
+            {name: "Scissors (Hand) (solid)", value: "fas fa-hand-scissors"}, \
+            {name: "Scissors (Hand) (regular)", value: "far fa-hand-scissors"}, \
+            {name: "Spock (Hand) (solid)", value: "fas fa-hand-spock"}, \
+            {name: "Spock (Hand) (regular)", value: "far fa-hand-spock"}, \
+            {name: "Hands (solid)", value: "fas fa-hands"}, \
+            {name: "Helping Hands (solid)", value: "fas fa-hands-helping"}, \
+            {name: "Handshake (solid)", value: "fas fa-handshake"}, \
+            {name: "Handshake (regular)", value: "far fa-handshake"}, \
+            {name: "Hanukiah (solid)", value: "fas fa-hanukiah"}, \
+            {name: "Hashtag (solid)", value: "fas fa-hashtag"}, \
+            {name: "Wizard's Hat (solid)", value: "fas fa-hat-wizard"}, \
+            {name: "Haykal (solid)", value: "fas fa-haykal"}, \
+            {name: "HDD (solid)", value: "fas fa-hdd"}, \
+            {name: "HDD (regular)", value: "far fa-hdd"}, \
+            {name: "heading (solid)", value: "fas fa-heading"}, \
+            {name: "headphones (solid)", value: "fas fa-headphones"}, \
+            {name: "Alternate Headphones (solid)", value: "fas fa-headphones-alt"}, \
+            {name: "Headset (solid)", value: "fas fa-headset"}, \
+            {name: "Heart (solid)", value: "fas fa-heart"}, \
+            {name: "Heart (regular)", value: "far fa-heart"}, \
+            {name: "Heart Broken (solid)", value: "fas fa-heart-broken"}, \
+            {name: "Heartbeat (solid)", value: "fas fa-heartbeat"}, \
+            {name: "Helicopter (solid)", value: "fas fa-helicopter"}, \
+            {name: "Highlighter (solid)", value: "fas fa-highlighter"}, \
+            {name: "Hiking (solid)", value: "fas fa-hiking"}, \
+            {name: "Hippo (solid)", value: "fas fa-hippo"}, \
+            {name: "Hips (brands)", value: "fab fa-hips"}, \
+            {name: "HireAHelper (brands)", value: "fab fa-hire-a-helper"}, \
+            {name: "History (solid)", value: "fas fa-history"}, \
+            {name: "Hockey Puck (solid)", value: "fas fa-hockey-puck"}, \
+            {name: "Holly Berry (solid)", value: "fas fa-holly-berry"}, \
+            {name: "home (solid)", value: "fas fa-home"}, \
+            {name: "Hooli (brands)", value: "fab fa-hooli"}, \
+            {name: "Hornbill (brands)", value: "fab fa-hornbill"}, \
+            {name: "Horse (solid)", value: "fas fa-horse"}, \
+            {name: "Horse Head (solid)", value: "fas fa-horse-head"}, \
+            {name: "hospital (solid)", value: "fas fa-hospital"}, \
+            {name: "hospital (regular)", value: "far fa-hospital"}, \
+            {name: "Alternate Hospital (solid)", value: "fas fa-hospital-alt"}, \
+            {name: "Hospital Symbol (solid)", value: "fas fa-hospital-symbol"}, \
+            {name: "Hot Tub (solid)", value: "fas fa-hot-tub"}, \
+            {name: "Hotel (solid)", value: "fas fa-hotel"}, \
+            {name: "Hotjar (brands)", value: "fab fa-hotjar"}, \
+            {name: "Hourglass (solid)", value: "fas fa-hourglass"}, \
+            {name: "Hourglass (regular)", value: "far fa-hourglass"}, \
+            {name: "Hourglass End (solid)", value: "fas fa-hourglass-end"}, \
+            {name: "Hourglass Half (solid)", value: "fas fa-hourglass-half"}, \
+            {name: "Hourglass Start (solid)", value: "fas fa-hourglass-start"}, \
+            {name: "Damaged House (solid)", value: "fas fa-house-damage"}, \
+            {name: "Houzz (brands)", value: "fab fa-houzz"}, \
+            {name: "Hryvnia (solid)", value: "fas fa-hryvnia"}, \
+            {name: "HTML 5 Logo (brands)", value: "fab fa-html5"}, \
+            {name: "HubSpot (brands)", value: "fab fa-hubspot"}, \
+            {name: "I Beam Cursor (solid)", value: "fas fa-i-cursor"}, \
+            {name: "Icicles (solid)", value: "fas fa-icicles"}, \
+            {name: "Identification Badge (solid)", value: "fas fa-id-badge"}, \
+            {name: "Identification Badge (regular)", value: "far fa-id-badge"}, \
+            {name: "Identification Card (solid)", value: "fas fa-id-card"}, \
+            {name: "Identification Card (regular)", value: "far fa-id-card"}, \
+            {name: "Alternate Identification Card (solid)", value: "fas fa-id-card-alt"}, \
+            {name: "Igloo (solid)", value: "fas fa-igloo"}, \
+            {name: "Image (solid)", value: "fas fa-image"}, \
+            {name: "Image (regular)", value: "far fa-image"}, \
+            {name: "Images (solid)", value: "fas fa-images"}, \
+            {name: "Images (regular)", value: "far fa-images"}, \
+            {name: "IMDB (brands)", value: "fab fa-imdb"}, \
+            {name: "inbox (solid)", value: "fas fa-inbox"}, \
+            {name: "Indent (solid)", value: "fas fa-indent"}, \
+            {name: "Industry (solid)", value: "fas fa-industry"}, \
+            {name: "Infinity (solid)", value: "fas fa-infinity"}, \
+            {name: "Info (solid)", value: "fas fa-info"}, \
+            {name: "Info Circle (solid)", value: "fas fa-info-circle"}, \
+            {name: "Instagram (brands)", value: "fab fa-instagram"}, \
+            {name: "Intercom (brands)", value: "fab fa-intercom"}, \
+            {name: "Internet-explorer (brands)", value: "fab fa-internet-explorer"}, \
+            {name: "InVision (brands)", value: "fab fa-invision"}, \
+            {name: "ioxhost (brands)", value: "fab fa-ioxhost"}, \
+            {name: "italic (solid)", value: "fas fa-italic"}, \
+            {name: "iTunes (brands)", value: "fab fa-itunes"}, \
+            {name: "Itunes Note (brands)", value: "fab fa-itunes-note"}, \
+            {name: "Java (brands)", value: "fab fa-java"}, \
+            {name: "Jedi (solid)", value: "fas fa-jedi"}, \
+            {name: "Jedi Order (brands)", value: "fab fa-jedi-order"}, \
+            {name: "Jenkis (brands)", value: "fab fa-jenkins"}, \
+            {name: "Jira (brands)", value: "fab fa-jira"}, \
+            {name: "Joget (brands)", value: "fab fa-joget"}, \
+            {name: "Joint (solid)", value: "fas fa-joint"}, \
+            {name: "Joomla Logo (brands)", value: "fab fa-joomla"}, \
+            {name: "Journal of the Whills (solid)", value: "fas fa-journal-whills"}, \
+            {name: "JavaScript (JS) (brands)", value: "fab fa-js"}, \
+            {name: "JavaScript (JS) Square (brands)", value: "fab fa-js-square"}, \
+            {name: "jsFiddle (brands)", value: "fab fa-jsfiddle"}, \
+            {name: "Kaaba (solid)", value: "fas fa-kaaba"}, \
+            {name: "Kaggle (brands)", value: "fab fa-kaggle"}, \
+            {name: "key (solid)", value: "fas fa-key"}, \
+            {name: "Keybase (brands)", value: "fab fa-keybase"}, \
+            {name: "Keyboard (solid)", value: "fas fa-keyboard"}, \
+            {name: "Keyboard (regular)", value: "far fa-keyboard"}, \
+            {name: "KeyCDN (brands)", value: "fab fa-keycdn"}, \
+            {name: "Khanda (solid)", value: "fas fa-khanda"}, \
+            {name: "Kickstarter (brands)", value: "fab fa-kickstarter"}, \
+            {name: "Kickstarter K (brands)", value: "fab fa-kickstarter-k"}, \
+            {name: "Kissing Face (solid)", value: "fas fa-kiss"}, \
+            {name: "Kissing Face (regular)", value: "far fa-kiss"}, \
+            {name: "Kissing Face With Smiling Eyes (solid)", value: "fas fa-kiss-beam"}, \
+            {name: "Kissing Face With Smiling Eyes (regular)", value: "far fa-kiss-beam"}, \
+            {name: "Face Blowing a Kiss (solid)", value: "fas fa-kiss-wink-heart"}, \
+            {name: "Face Blowing a Kiss (regular)", value: "far fa-kiss-wink-heart"}, \
+            {name: "Kiwi Bird (solid)", value: "fas fa-kiwi-bird"}, \
+            {name: "KORVUE (brands)", value: "fab fa-korvue"}, \
+            {name: "Landmark (solid)", value: "fas fa-landmark"}, \
+            {name: "Language (solid)", value: "fas fa-language"}, \
+            {name: "Laptop (solid)", value: "fas fa-laptop"}, \
+            {name: "Laptop Code (solid)", value: "fas fa-laptop-code"}, \
+            {name: "Laravel (brands)", value: "fab fa-laravel"}, \
+            {name: "last.fm (brands)", value: "fab fa-lastfm"}, \
+            {name: "last.fm Square (brands)", value: "fab fa-lastfm-square"}, \
+            {name: "Grinning Face With Big Eyes (solid)", value: "fas fa-laugh"}, \
+            {name: "Grinning Face With Big Eyes (regular)", value: "far fa-laugh"}, \
+            {name: "Laugh Face with Beaming Eyes (solid)", value: "fas fa-laugh-beam"}, \
+            {name: "Laugh Face with Beaming Eyes (regular)", value: "far fa-laugh-beam"}, \
+            {name: "Laughing Squinting Face (solid)", value: "fas fa-laugh-squint"}, \
+            {name: "Laughing Squinting Face (regular)", value: "far fa-laugh-squint"}, \
+            {name: "Laughing Winking Face (solid)", value: "fas fa-laugh-wink"}, \
+            {name: "Laughing Winking Face (regular)", value: "far fa-laugh-wink"}, \
+            {name: "Layer Group (solid)", value: "fas fa-layer-group"}, \
+            {name: "leaf (solid)", value: "fas fa-leaf"}, \
+            {name: "Leanpub (brands)", value: "fab fa-leanpub"}, \
+            {name: "Lemon (solid)", value: "fas fa-lemon"}, \
+            {name: "Lemon (regular)", value: "far fa-lemon"}, \
+            {name: "Less (brands)", value: "fab fa-less"}, \
+            {name: "Less Than (solid)", value: "fas fa-less-than"}, \
+            {name: "Less Than Equal To (solid)", value: "fas fa-less-than-equal"}, \
+            {name: "Alternate Level Down (solid)", value: "fas fa-level-down-alt"}, \
+            {name: "Alternate Level Up (solid)", value: "fas fa-level-up-alt"}, \
+            {name: "Life Ring (solid)", value: "fas fa-life-ring"}, \
+            {name: "Life Ring (regular)", value: "far fa-life-ring"}, \
+            {name: "Lightbulb (solid)", value: "fas fa-lightbulb"}, \
+            {name: "Lightbulb (regular)", value: "far fa-lightbulb"}, \
+            {name: "Line (brands)", value: "fab fa-line"}, \
+            {name: "Link (solid)", value: "fas fa-link"}, \
+            {name: "LinkedIn (brands)", value: "fab fa-linkedin"}, \
+            {name: "LinkedIn In (brands)", value: "fab fa-linkedin-in"}, \
+            {name: "Linode (brands)", value: "fab fa-linode"}, \
+            {name: "Linux (brands)", value: "fab fa-linux"}, \
+            {name: "Turkish Lira Sign (solid)", value: "fas fa-lira-sign"}, \
+            {name: "List (solid)", value: "fas fa-list"}, \
+            {name: "Alternate List (solid)", value: "fas fa-list-alt"}, \
+            {name: "Alternate List (regular)", value: "far fa-list-alt"}, \
+            {name: "list-ol (solid)", value: "fas fa-list-ol"}, \
+            {name: "list-ul (solid)", value: "fas fa-list-ul"}, \
+            {name: "location-arrow (solid)", value: "fas fa-location-arrow"}, \
+            {name: "lock (solid)", value: "fas fa-lock"}, \
+            {name: "Lock Open (solid)", value: "fas fa-lock-open"}, \
+            {name: "Alternate Long Arrow Down (solid)", value: "fas fa-long-arrow-alt-down"}, \
+            {name: "Alternate Long Arrow Left (solid)", value: "fas fa-long-arrow-alt-left"}, \
+            {name: "Alternate Long Arrow Right (solid)", value: "fas fa-long-arrow-alt-right"}, \
+            {name: "Alternate Long Arrow Up (solid)", value: "fas fa-long-arrow-alt-up"}, \
+            {name: "Low Vision (solid)", value: "fas fa-low-vision"}, \
+            {name: "Luggage Cart (solid)", value: "fas fa-luggage-cart"}, \
+            {name: "lyft (brands)", value: "fab fa-lyft"}, \
+            {name: "Magento (brands)", value: "fab fa-magento"}, \
+            {name: "magic (solid)", value: "fas fa-magic"}, \
+            {name: "magnet (solid)", value: "fas fa-magnet"}, \
+            {name: "Mail Bulk (solid)", value: "fas fa-mail-bulk"}, \
+            {name: "Mailchimp (brands)", value: "fab fa-mailchimp"}, \
+            {name: "Male (solid)", value: "fas fa-male"}, \
+            {name: "Mandalorian (brands)", value: "fab fa-mandalorian"}, \
+            {name: "Map (solid)", value: "fas fa-map"}, \
+            {name: "Map (regular)", value: "far fa-map"}, \
+            {name: "Map Marked (solid)", value: "fas fa-map-marked"}, \
+            {name: "Alternate Map Marked (solid)", value: "fas fa-map-marked-alt"}, \
+            {name: "map-marker (solid)", value: "fas fa-map-marker"}, \
+            {name: "Alternate Map Marker (solid)", value: "fas fa-map-marker-alt"}, \
+            {name: "Map Pin (solid)", value: "fas fa-map-pin"}, \
+            {name: "Map Signs (solid)", value: "fas fa-map-signs"}, \
+            {name: "Markdown (brands)", value: "fab fa-markdown"}, \
+            {name: "Marker (solid)", value: "fas fa-marker"}, \
+            {name: "Mars (solid)", value: "fas fa-mars"}, \
+            {name: "Mars Double (solid)", value: "fas fa-mars-double"}, \
+            {name: "Mars Stroke (solid)", value: "fas fa-mars-stroke"}, \
+            {name: "Mars Stroke Horizontal (solid)", value: "fas fa-mars-stroke-h"}, \
+            {name: "Mars Stroke Vertical (solid)", value: "fas fa-mars-stroke-v"}, \
+            {name: "Mask (solid)", value: "fas fa-mask"}, \
+            {name: "Mastodon (brands)", value: "fab fa-mastodon"}, \
+            {name: "MaxCDN (brands)", value: "fab fa-maxcdn"}, \
+            {name: "Medal (solid)", value: "fas fa-medal"}, \
+            {name: "MedApps (brands)", value: "fab fa-medapps"}, \
+            {name: "Medium (brands)", value: "fab fa-medium"}, \
+            {name: "Medium M (brands)", value: "fab fa-medium-m"}, \
+            {name: "medkit (solid)", value: "fas fa-medkit"}, \
+            {name: "MRT (brands)", value: "fab fa-medrt"}, \
+            {name: "Meetup (brands)", value: "fab fa-meetup"}, \
+            {name: "Megaport (brands)", value: "fab fa-megaport"}, \
+            {name: "Neutral Face (solid)", value: "fas fa-meh"}, \
+            {name: "Neutral Face (regular)", value: "far fa-meh"}, \
+            {name: "Face Without Mouth (solid)", value: "fas fa-meh-blank"}, \
+            {name: "Face Without Mouth (regular)", value: "far fa-meh-blank"}, \
+            {name: "Face With Rolling Eyes (solid)", value: "fas fa-meh-rolling-eyes"}, \
+            {name: "Face With Rolling Eyes (regular)", value: "far fa-meh-rolling-eyes"}, \
+            {name: "Memory (solid)", value: "fas fa-memory"}, \
+            {name: "Mendeley (brands)", value: "fab fa-mendeley"}, \
+            {name: "Menorah (solid)", value: "fas fa-menorah"}, \
+            {name: "Mercury (solid)", value: "fas fa-mercury"}, \
+            {name: "Meteor (solid)", value: "fas fa-meteor"}, \
+            {name: "Microchip (solid)", value: "fas fa-microchip"}, \
+            {name: "microphone (solid)", value: "fas fa-microphone"}, \
+            {name: "Alternate Microphone (solid)", value: "fas fa-microphone-alt"}, \
+            {name: "Alternate Microphone Slash (solid)", value: "fas fa-microphone-alt-slash"}, \
+            {name: "Microphone Slash (solid)", value: "fas fa-microphone-slash"}, \
+            {name: "Microscope (solid)", value: "fas fa-microscope"}, \
+            {name: "Microsoft (brands)", value: "fab fa-microsoft"}, \
+            {name: "minus (solid)", value: "fas fa-minus"}, \
+            {name: "Minus Circle (solid)", value: "fas fa-minus-circle"}, \
+            {name: "Minus Square (solid)", value: "fas fa-minus-square"}, \
+            {name: "Minus Square (regular)", value: "far fa-minus-square"}, \
+            {name: "Mitten (solid)", value: "fas fa-mitten"}, \
+            {name: "Mix (brands)", value: "fab fa-mix"}, \
+            {name: "Mixcloud (brands)", value: "fab fa-mixcloud"}, \
+            {name: "Mizuni (brands)", value: "fab fa-mizuni"}, \
+            {name: "Mobile Phone (solid)", value: "fas fa-mobile"}, \
+            {name: "Alternate Mobile (solid)", value: "fas fa-mobile-alt"}, \
+            {name: "MODX (brands)", value: "fab fa-modx"}, \
+            {name: "Monero (brands)", value: "fab fa-monero"}, \
+            {name: "Money Bill (solid)", value: "fas fa-money-bill"}, \
+            {name: "Alternate Money Bill (solid)", value: "fas fa-money-bill-alt"}, \
+            {name: "Alternate Money Bill (regular)", value: "far fa-money-bill-alt"}, \
+            {name: "Wavy Money Bill (solid)", value: "fas fa-money-bill-wave"}, \
+            {name: "Alternate Wavy Money Bill (solid)", value: "fas fa-money-bill-wave-alt"}, \
+            {name: "Money Check (solid)", value: "fas fa-money-check"}, \
+            {name: "Alternate Money Check (solid)", value: "fas fa-money-check-alt"}, \
+            {name: "Monument (solid)", value: "fas fa-monument"}, \
+            {name: "Moon (solid)", value: "fas fa-moon"}, \
+            {name: "Moon (regular)", value: "far fa-moon"}, \
+            {name: "Mortar Pestle (solid)", value: "fas fa-mortar-pestle"}, \
+            {name: "Mosque (solid)", value: "fas fa-mosque"}, \
+            {name: "Motorcycle (solid)", value: "fas fa-motorcycle"}, \
+            {name: "Mountain (solid)", value: "fas fa-mountain"}, \
+            {name: "Mouse Pointer (solid)", value: "fas fa-mouse-pointer"}, \
+            {name: "Mug Hot (solid)", value: "fas fa-mug-hot"}, \
+            {name: "Music (solid)", value: "fas fa-music"}, \
+            {name: "Napster (brands)", value: "fab fa-napster"}, \
+            {name: "Neos (brands)", value: "fab fa-neos"}, \
+            {name: "Wired Network (solid)", value: "fas fa-network-wired"}, \
+            {name: "Neuter (solid)", value: "fas fa-neuter"}, \
+            {name: "Newspaper (solid)", value: "fas fa-newspaper"}, \
+            {name: "Newspaper (regular)", value: "far fa-newspaper"}, \
+            {name: "Nimblr (brands)", value: "fab fa-nimblr"}, \
+            {name: "Nintendo Switch (brands)", value: "fab fa-nintendo-switch"}, \
+            {name: "Node.js (brands)", value: "fab fa-node"}, \
+            {name: "Node.js JS (brands)", value: "fab fa-node-js"}, \
+            {name: "Not Equal (solid)", value: "fas fa-not-equal"}, \
+            {name: "Medical Notes (solid)", value: "fas fa-notes-medical"}, \
+            {name: "npm (brands)", value: "fab fa-npm"}, \
+            {name: "NS8 (brands)", value: "fab fa-ns8"}, \
+            {name: "Nutritionix (brands)", value: "fab fa-nutritionix"}, \
+            {name: "Object Group (solid)", value: "fas fa-object-group"}, \
+            {name: "Object Group (regular)", value: "far fa-object-group"}, \
+            {name: "Object Ungroup (solid)", value: "fas fa-object-ungroup"}, \
+            {name: "Object Ungroup (regular)", value: "far fa-object-ungroup"}, \
+            {name: "Odnoklassniki (brands)", value: "fab fa-odnoklassniki"}, \
+            {name: "Odnoklassniki Square (brands)", value: "fab fa-odnoklassniki-square"}, \
+            {name: "Oil Can (solid)", value: "fas fa-oil-can"}, \
+            {name: "Old Republic (brands)", value: "fab fa-old-republic"}, \
+            {name: "Om (solid)", value: "fas fa-om"}, \
+            {name: "OpenCart (brands)", value: "fab fa-opencart"}, \
+            {name: "OpenID (brands)", value: "fab fa-openid"}, \
+            {name: "Opera (brands)", value: "fab fa-opera"}, \
+            {name: "Optin Monster (brands)", value: "fab fa-optin-monster"}, \
+            {name: "Open Source Initiative (brands)", value: "fab fa-osi"}, \
+            {name: "Otter (solid)", value: "fas fa-otter"}, \
+            {name: "Outdent (solid)", value: "fas fa-outdent"}, \
+            {name: "page4 Corporation (brands)", value: "fab fa-page4"}, \
+            {name: "Pagelines (brands)", value: "fab fa-pagelines"}, \
+            {name: "Paint Brush (solid)", value: "fas fa-paint-brush"}, \
+            {name: "Paint Roller (solid)", value: "fas fa-paint-roller"}, \
+            {name: "Palette (solid)", value: "fas fa-palette"}, \
+            {name: "Palfed (brands)", value: "fab fa-palfed"}, \
+            {name: "Pallet (solid)", value: "fas fa-pallet"}, \
+            {name: "Paper Plane (solid)", value: "fas fa-paper-plane"}, \
+            {name: "Paper Plane (regular)", value: "far fa-paper-plane"}, \
+            {name: "Paperclip (solid)", value: "fas fa-paperclip"}, \
+            {name: "Parachute Box (solid)", value: "fas fa-parachute-box"}, \
+            {name: "paragraph (solid)", value: "fas fa-paragraph"}, \
+            {name: "Parking (solid)", value: "fas fa-parking"}, \
+            {name: "Passport (solid)", value: "fas fa-passport"}, \
+            {name: "Pastafarianism (solid)", value: "fas fa-pastafarianism"}, \
+            {name: "Paste (solid)", value: "fas fa-paste"}, \
+            {name: "Patreon (brands)", value: "fab fa-patreon"}, \
+            {name: "pause (solid)", value: "fas fa-pause"}, \
+            {name: "Pause Circle (solid)", value: "fas fa-pause-circle"}, \
+            {name: "Pause Circle (regular)", value: "far fa-pause-circle"}, \
+            {name: "Paw (solid)", value: "fas fa-paw"}, \
+            {name: "Paypal (brands)", value: "fab fa-paypal"}, \
+            {name: "Peace (solid)", value: "fas fa-peace"}, \
+            {name: "Pen (solid)", value: "fas fa-pen"}, \
+            {name: "Alternate Pen (solid)", value: "fas fa-pen-alt"}, \
+            {name: "Pen Fancy (solid)", value: "fas fa-pen-fancy"}, \
+            {name: "Pen Nib (solid)", value: "fas fa-pen-nib"}, \
+            {name: "Pen Square (solid)", value: "fas fa-pen-square"}, \
+            {name: "Alternate Pencil (solid)", value: "fas fa-pencil-alt"}, \
+            {name: "Pencil Ruler (solid)", value: "fas fa-pencil-ruler"}, \
+            {name: "Penny Arcade (brands)", value: "fab fa-penny-arcade"}, \
+            {name: "People Carry (solid)", value: "fas fa-people-carry"}, \
+            {name: "Percent (solid)", value: "fas fa-percent"}, \
+            {name: "Percentage (solid)", value: "fas fa-percentage"}, \
+            {name: "Periscope (brands)", value: "fab fa-periscope"}, \
+            {name: "Person Entering Booth (solid)", value: "fas fa-person-booth"}, \
+            {name: "Phabricator (brands)", value: "fab fa-phabricator"}, \
+            {name: "Phoenix Framework (brands)", value: "fab fa-phoenix-framework"}, \
+            {name: "Phoenix Squadron (brands)", value: "fab fa-phoenix-squadron"}, \
+            {name: "Phone (solid)", value: "fas fa-phone"}, \
+            {name: "Phone Slash (solid)", value: "fas fa-phone-slash"}, \
+            {name: "Phone Square (solid)", value: "fas fa-phone-square"}, \
+            {name: "Phone Volume (solid)", value: "fas fa-phone-volume"}, \
+            {name: "PHP (brands)", value: "fab fa-php"}, \
+            {name: "Pied Piper Logo (brands)", value: "fab fa-pied-piper"}, \
+            {name: "Alternate Pied Piper Logo (brands)", value: "fab fa-pied-piper-alt"}, \
+            {name: "Pied Piper-hat (brands)", value: "fab fa-pied-piper-hat"}, \
+            {name: "Pied Piper PP Logo (Old) (brands)", value: "fab fa-pied-piper-pp"}, \
+            {name: "Piggy Bank (solid)", value: "fas fa-piggy-bank"}, \
+            {name: "Pills (solid)", value: "fas fa-pills"}, \
+            {name: "Pinterest (brands)", value: "fab fa-pinterest"}, \
+            {name: "Pinterest P (brands)", value: "fab fa-pinterest-p"}, \
+            {name: "Pinterest Square (brands)", value: "fab fa-pinterest-square"}, \
+            {name: "Place of Worship (solid)", value: "fas fa-place-of-worship"}, \
+            {name: "plane (solid)", value: "fas fa-plane"}, \
+            {name: "Plane Arrival (solid)", value: "fas fa-plane-arrival"}, \
+            {name: "Plane Departure (solid)", value: "fas fa-plane-departure"}, \
+            {name: "play (solid)", value: "fas fa-play"}, \
+            {name: "Play Circle (solid)", value: "fas fa-play-circle"}, \
+            {name: "Play Circle (regular)", value: "far fa-play-circle"}, \
+            {name: "PlayStation (brands)", value: "fab fa-playstation"}, \
+            {name: "Plug (solid)", value: "fas fa-plug"}, \
+            {name: "plus (solid)", value: "fas fa-plus"}, \
+            {name: "Plus Circle (solid)", value: "fas fa-plus-circle"}, \
+            {name: "Plus Square (solid)", value: "fas fa-plus-square"}, \
+            {name: "Plus Square (regular)", value: "far fa-plus-square"}, \
+            {name: "Podcast (solid)", value: "fas fa-podcast"}, \
+            {name: "Poll (solid)", value: "fas fa-poll"}, \
+            {name: "Poll H (solid)", value: "fas fa-poll-h"}, \
+            {name: "Poo (solid)", value: "fas fa-poo"}, \
+            {name: "Poo Storm (solid)", value: "fas fa-poo-storm"}, \
+            {name: "Poop (solid)", value: "fas fa-poop"}, \
+            {name: "Portrait (solid)", value: "fas fa-portrait"}, \
+            {name: "Pound Sign (solid)", value: "fas fa-pound-sign"}, \
+            {name: "Power Off (solid)", value: "fas fa-power-off"}, \
+            {name: "Pray (solid)", value: "fas fa-pray"}, \
+            {name: "Praying Hands (solid)", value: "fas fa-praying-hands"}, \
+            {name: "Prescription (solid)", value: "fas fa-prescription"}, \
+            {name: "Prescription Bottle (solid)", value: "fas fa-prescription-bottle"}, \
+            {name: "Alternate Prescription Bottle (solid)", value: "fas fa-prescription-bottle-alt"}, \
+            {name: "print (solid)", value: "fas fa-print"}, \
+            {name: "Procedures (solid)", value: "fas fa-procedures"}, \
+            {name: "Product Hunt (brands)", value: "fab fa-product-hunt"}, \
+            {name: "Project Diagram (solid)", value: "fas fa-project-diagram"}, \
+            {name: "Pushed (brands)", value: "fab fa-pushed"}, \
+            {name: "Puzzle Piece (solid)", value: "fas fa-puzzle-piece"}, \
+            {name: "Python (brands)", value: "fab fa-python"}, \
+            {name: "QQ (brands)", value: "fab fa-qq"}, \
+            {name: "qrcode (solid)", value: "fas fa-qrcode"}, \
+            {name: "Question (solid)", value: "fas fa-question"}, \
+            {name: "Question Circle (solid)", value: "fas fa-question-circle"}, \
+            {name: "Question Circle (regular)", value: "far fa-question-circle"}, \
+            {name: "Quidditch (solid)", value: "fas fa-quidditch"}, \
+            {name: "QuinScape (brands)", value: "fab fa-quinscape"}, \
+            {name: "Quora (brands)", value: "fab fa-quora"}, \
+            {name: "quote-left (solid)", value: "fas fa-quote-left"}, \
+            {name: "quote-right (solid)", value: "fas fa-quote-right"}, \
+            {name: "Quran (solid)", value: "fas fa-quran"}, \
+            {name: "R Project (brands)", value: "fab fa-r-project"}, \
+            {name: "Radiation (solid)", value: "fas fa-radiation"}, \
+            {name: "Alternate Radiation (solid)", value: "fas fa-radiation-alt"}, \
+            {name: "Rainbow (solid)", value: "fas fa-rainbow"}, \
+            {name: "random (solid)", value: "fas fa-random"}, \
+            {name: "Raspberry Pi (brands)", value: "fab fa-raspberry-pi"}, \
+            {name: "Ravelry (brands)", value: "fab fa-ravelry"}, \
+            {name: "React (brands)", value: "fab fa-react"}, \
+            {name: "ReactEurope (brands)", value: "fab fa-reacteurope"}, \
+            {name: "ReadMe (brands)", value: "fab fa-readme"}, \
+            {name: "Rebel Alliance (brands)", value: "fab fa-rebel"}, \
+            {name: "Receipt (solid)", value: "fas fa-receipt"}, \
+            {name: "Recycle (solid)", value: "fas fa-recycle"}, \
+            {name: "red river (brands)", value: "fab fa-red-river"}, \
+            {name: "reddit Logo (brands)", value: "fab fa-reddit"}, \
+            {name: "reddit Alien (brands)", value: "fab fa-reddit-alien"}, \
+            {name: "reddit Square (brands)", value: "fab fa-reddit-square"}, \
+            {name: "Redhat (brands)", value: "fab fa-redhat"}, \
+            {name: "Redo (solid)", value: "fas fa-redo"}, \
+            {name: "Alternate Redo (solid)", value: "fas fa-redo-alt"}, \
+            {name: "Registered Trademark (solid)", value: "fas fa-registered"}, \
+            {name: "Registered Trademark (regular)", value: "far fa-registered"}, \
+            {name: "Renren (brands)", value: "fab fa-renren"}, \
+            {name: "Reply (solid)", value: "fas fa-reply"}, \
+            {name: "reply-all (solid)", value: "fas fa-reply-all"}, \
+            {name: "replyd (brands)", value: "fab fa-replyd"}, \
+            {name: "Republican (solid)", value: "fas fa-republican"}, \
+            {name: "Researchgate (brands)", value: "fab fa-researchgate"}, \
+            {name: "Resolving (brands)", value: "fab fa-resolving"}, \
+            {name: "Restroom (solid)", value: "fas fa-restroom"}, \
+            {name: "Retweet (solid)", value: "fas fa-retweet"}, \
+            {name: "Rev.io (brands)", value: "fab fa-rev"}, \
+            {name: "Ribbon (solid)", value: "fas fa-ribbon"}, \
+            {name: "Ring (solid)", value: "fas fa-ring"}, \
+            {name: "road (solid)", value: "fas fa-road"}, \
+            {name: "Robot (solid)", value: "fas fa-robot"}, \
+            {name: "rocket (solid)", value: "fas fa-rocket"}, \
+            {name: "Rocket.Chat (brands)", value: "fab fa-rocketchat"}, \
+            {name: "Rockrms (brands)", value: "fab fa-rockrms"}, \
+            {name: "Route (solid)", value: "fas fa-route"}, \
+            {name: "rss (solid)", value: "fas fa-rss"}, \
+            {name: "RSS Square (solid)", value: "fas fa-rss-square"}, \
+            {name: "Ruble Sign (solid)", value: "fas fa-ruble-sign"}, \
+            {name: "Ruler (solid)", value: "fas fa-ruler"}, \
+            {name: "Ruler Combined (solid)", value: "fas fa-ruler-combined"}, \
+            {name: "Ruler Horizontal (solid)", value: "fas fa-ruler-horizontal"}, \
+            {name: "Ruler Vertical (solid)", value: "fas fa-ruler-vertical"}, \
+            {name: "Running (solid)", value: "fas fa-running"}, \
+            {name: "Indian Rupee Sign (solid)", value: "fas fa-rupee-sign"}, \
+            {name: "Crying Face (solid)", value: "fas fa-sad-cry"}, \
+            {name: "Crying Face (regular)", value: "far fa-sad-cry"}, \
+            {name: "Loudly Crying Face (solid)", value: "fas fa-sad-tear"}, \
+            {name: "Loudly Crying Face (regular)", value: "far fa-sad-tear"}, \
+            {name: "Safari (brands)", value: "fab fa-safari"}, \
+            {name: "Sass (brands)", value: "fab fa-sass"}, \
+            {name: "Satellite (solid)", value: "fas fa-satellite"}, \
+            {name: "Satellite Dish (solid)", value: "fas fa-satellite-dish"}, \
+            {name: "Save (solid)", value: "fas fa-save"}, \
+            {name: "Save (regular)", value: "far fa-save"}, \
+            {name: "SCHLIX (brands)", value: "fab fa-schlix"}, \
+            {name: "School (solid)", value: "fas fa-school"}, \
+            {name: "Screwdriver (solid)", value: "fas fa-screwdriver"}, \
+            {name: "Scribd (brands)", value: "fab fa-scribd"}, \
+            {name: "Scroll (solid)", value: "fas fa-scroll"}, \
+            {name: "Sd Card (solid)", value: "fas fa-sd-card"}, \
+            {name: "Search (solid)", value: "fas fa-search"}, \
+            {name: "Search Dollar (solid)", value: "fas fa-search-dollar"}, \
+            {name: "Search Location (solid)", value: "fas fa-search-location"}, \
+            {name: "Search Minus (solid)", value: "fas fa-search-minus"}, \
+            {name: "Search Plus (solid)", value: "fas fa-search-plus"}, \
+            {name: "Searchengin (brands)", value: "fab fa-searchengin"}, \
+            {name: "Seedling (solid)", value: "fas fa-seedling"}, \
+            {name: "Sellcast (brands)", value: "fab fa-sellcast"}, \
+            {name: "Sellsy (brands)", value: "fab fa-sellsy"}, \
+            {name: "Server (solid)", value: "fas fa-server"}, \
+            {name: "Servicestack (brands)", value: "fab fa-servicestack"}, \
+            {name: "Shapes (solid)", value: "fas fa-shapes"}, \
+            {name: "Share (solid)", value: "fas fa-share"}, \
+            {name: "Alternate Share (solid)", value: "fas fa-share-alt"}, \
+            {name: "Alternate Share Square (solid)", value: "fas fa-share-alt-square"}, \
+            {name: "Share Square (solid)", value: "fas fa-share-square"}, \
+            {name: "Share Square (regular)", value: "far fa-share-square"}, \
+            {name: "Shekel Sign (solid)", value: "fas fa-shekel-sign"}, \
+            {name: "Alternate Shield (solid)", value: "fas fa-shield-alt"}, \
+            {name: "Ship (solid)", value: "fas fa-ship"}, \
+            {name: "Shipping Fast (solid)", value: "fas fa-shipping-fast"}, \
+            {name: "Shirts in Bulk (brands)", value: "fab fa-shirtsinbulk"}, \
+            {name: "Shoe Prints (solid)", value: "fas fa-shoe-prints"}, \
+            {name: "Shopping Bag (solid)", value: "fas fa-shopping-bag"}, \
+            {name: "Shopping Basket (solid)", value: "fas fa-shopping-basket"}, \
+            {name: "shopping-cart (solid)", value: "fas fa-shopping-cart"}, \
+            {name: "Shopware (brands)", value: "fab fa-shopware"}, \
+            {name: "Shower (solid)", value: "fas fa-shower"}, \
+            {name: "Shuttle Van (solid)", value: "fas fa-shuttle-van"}, \
+            {name: "Sign (solid)", value: "fas fa-sign"}, \
+            {name: "Alternate Sign In (solid)", value: "fas fa-sign-in-alt"}, \
+            {name: "Sign Language (solid)", value: "fas fa-sign-language"}, \
+            {name: "Alternate Sign Out (solid)", value: "fas fa-sign-out-alt"}, \
+            {name: "signal (solid)", value: "fas fa-signal"}, \
+            {name: "Signature (solid)", value: "fas fa-signature"}, \
+            {name: "SIM Card (solid)", value: "fas fa-sim-card"}, \
+            {name: "SimplyBuilt (brands)", value: "fab fa-simplybuilt"}, \
+            {name: "SISTRIX (brands)", value: "fab fa-sistrix"}, \
+            {name: "Sitemap (solid)", value: "fas fa-sitemap"}, \
+            {name: "Sith (brands)", value: "fab fa-sith"}, \
+            {name: "Skating (solid)", value: "fas fa-skating"}, \
+            {name: "Sketch (brands)", value: "fab fa-sketch"}, \
+            {name: "Skiing (solid)", value: "fas fa-skiing"}, \
+            {name: "Skiing Nordic (solid)", value: "fas fa-skiing-nordic"}, \
+            {name: "Skull (solid)", value: "fas fa-skull"}, \
+            {name: "Skull &amp; Crossbones (solid)", value: "fas fa-skull-crossbones"}, \
+            {name: "skyatlas (brands)", value: "fab fa-skyatlas"}, \
+            {name: "Skype (brands)", value: "fab fa-skype"}, \
+            {name: "Slack Logo (brands)", value: "fab fa-slack"}, \
+            {name: "Slack Hashtag (brands)", value: "fab fa-slack-hash"}, \
+            {name: "Slash (solid)", value: "fas fa-slash"}, \
+            {name: "Sleigh (solid)", value: "fas fa-sleigh"}, \
+            {name: "Horizontal Sliders (solid)", value: "fas fa-sliders-h"}, \
+            {name: "Slideshare (brands)", value: "fab fa-slideshare"}, \
+            {name: "Smiling Face (solid)", value: "fas fa-smile"}, \
+            {name: "Smiling Face (regular)", value: "far fa-smile"}, \
+            {name: "Beaming Face With Smiling Eyes (solid)", value: "fas fa-smile-beam"}, \
+            {name: "Beaming Face With Smiling Eyes (regular)", value: "far fa-smile-beam"}, \
+            {name: "Winking Face (solid)", value: "fas fa-smile-wink"}, \
+            {name: "Winking Face (regular)", value: "far fa-smile-wink"}, \
+            {name: "Smog (solid)", value: "fas fa-smog"}, \
+            {name: "Smoking (solid)", value: "fas fa-smoking"}, \
+            {name: "Smoking Ban (solid)", value: "fas fa-smoking-ban"}, \
+            {name: "SMS (solid)", value: "fas fa-sms"}, \
+            {name: "Snapchat (brands)", value: "fab fa-snapchat"}, \
+            {name: "Snapchat Ghost (brands)", value: "fab fa-snapchat-ghost"}, \
+            {name: "Snapchat Square (brands)", value: "fab fa-snapchat-square"}, \
+            {name: "Snowboarding (solid)", value: "fas fa-snowboarding"}, \
+            {name: "Snowflake (solid)", value: "fas fa-snowflake"}, \
+            {name: "Snowflake (regular)", value: "far fa-snowflake"}, \
+            {name: "Snowman (solid)", value: "fas fa-snowman"}, \
+            {name: "Snowplow (solid)", value: "fas fa-snowplow"}, \
+            {name: "Socks (solid)", value: "fas fa-socks"}, \
+            {name: "Solar Panel (solid)", value: "fas fa-solar-panel"}, \
+            {name: "Sort (solid)", value: "fas fa-sort"}, \
+            {name: "Sort Alpha Down (solid)", value: "fas fa-sort-alpha-down"}, \
+            {name: "Sort Alpha Up (solid)", value: "fas fa-sort-alpha-up"}, \
+            {name: "Sort Amount Down (solid)", value: "fas fa-sort-amount-down"}, \
+            {name: "Sort Amount Up (solid)", value: "fas fa-sort-amount-up"}, \
+            {name: "Sort Down (Descending) (solid)", value: "fas fa-sort-down"}, \
+            {name: "Sort Numeric Down (solid)", value: "fas fa-sort-numeric-down"}, \
+            {name: "Sort Numeric Up (solid)", value: "fas fa-sort-numeric-up"}, \
+            {name: "Sort Up (Ascending) (solid)", value: "fas fa-sort-up"}, \
+            {name: "SoundCloud (brands)", value: "fab fa-soundcloud"}, \
+            {name: "Sourcetree (brands)", value: "fab fa-sourcetree"}, \
+            {name: "Spa (solid)", value: "fas fa-spa"}, \
+            {name: "Space Shuttle (solid)", value: "fas fa-space-shuttle"}, \
+            {name: "Speakap (brands)", value: "fab fa-speakap"}, \
+            {name: "Spider (solid)", value: "fas fa-spider"}, \
+            {name: "Spinner (solid)", value: "fas fa-spinner"}, \
+            {name: "Splotch (solid)", value: "fas fa-splotch"}, \
+            {name: "Spotify (brands)", value: "fab fa-spotify"}, \
+            {name: "Spray Can (solid)", value: "fas fa-spray-can"}, \
+            {name: "Square (solid)", value: "fas fa-square"}, \
+            {name: "Square (regular)", value: "far fa-square"}, \
+            {name: "Square Full (solid)", value: "fas fa-square-full"}, \
+            {name: "Alternate Square Root (solid)", value: "fas fa-square-root-alt"}, \
+            {name: "Squarespace (brands)", value: "fab fa-squarespace"}, \
+            {name: "Stack Exchange (brands)", value: "fab fa-stack-exchange"}, \
+            {name: "Stack Overflow (brands)", value: "fab fa-stack-overflow"}, \
+            {name: "Stamp (solid)", value: "fas fa-stamp"}, \
+            {name: "Star (solid)", value: "fas fa-star"}, \
+            {name: "Star (regular)", value: "far fa-star"}, \
+            {name: "Star and Crescent (solid)", value: "fas fa-star-and-crescent"}, \
+            {name: "star-half (solid)", value: "fas fa-star-half"}, \
+            {name: "star-half (regular)", value: "far fa-star-half"}, \
+            {name: "Alternate Star Half (solid)", value: "fas fa-star-half-alt"}, \
+            {name: "Star of David (solid)", value: "fas fa-star-of-david"}, \
+            {name: "Star of Life (solid)", value: "fas fa-star-of-life"}, \
+            {name: "StayLinked (brands)", value: "fab fa-staylinked"}, \
+            {name: "Steam (brands)", value: "fab fa-steam"}, \
+            {name: "Steam Square (brands)", value: "fab fa-steam-square"}, \
+            {name: "Steam Symbol (brands)", value: "fab fa-steam-symbol"}, \
+            {name: "step-backward (solid)", value: "fas fa-step-backward"}, \
+            {name: "step-forward (solid)", value: "fas fa-step-forward"}, \
+            {name: "Stethoscope (solid)", value: "fas fa-stethoscope"}, \
+            {name: "Sticker Mule (brands)", value: "fab fa-sticker-mule"}, \
+            {name: "Sticky Note (solid)", value: "fas fa-sticky-note"}, \
+            {name: "Sticky Note (regular)", value: "far fa-sticky-note"}, \
+            {name: "stop (solid)", value: "fas fa-stop"}, \
+            {name: "Stop Circle (solid)", value: "fas fa-stop-circle"}, \
+            {name: "Stop Circle (regular)", value: "far fa-stop-circle"}, \
+            {name: "Stopwatch (solid)", value: "fas fa-stopwatch"}, \
+            {name: "Store (solid)", value: "fas fa-store"}, \
+            {name: "Alternate Store (solid)", value: "fas fa-store-alt"}, \
+            {name: "Strava (brands)", value: "fab fa-strava"}, \
+            {name: "Stream (solid)", value: "fas fa-stream"}, \
+            {name: "Street View (solid)", value: "fas fa-street-view"}, \
+            {name: "Strikethrough (solid)", value: "fas fa-strikethrough"}, \
+            {name: "Stripe (brands)", value: "fab fa-stripe"}, \
+            {name: "Stripe S (brands)", value: "fab fa-stripe-s"}, \
+            {name: "Stroopwafel (solid)", value: "fas fa-stroopwafel"}, \
+            {name: "Studio Vinari (brands)", value: "fab fa-studiovinari"}, \
+            {name: "StumbleUpon Logo (brands)", value: "fab fa-stumbleupon"}, \
+            {name: "StumbleUpon Circle (brands)", value: "fab fa-stumbleupon-circle"}, \
+            {name: "subscript (solid)", value: "fas fa-subscript"}, \
+            {name: "Subway (solid)", value: "fas fa-subway"}, \
+            {name: "Suitcase (solid)", value: "fas fa-suitcase"}, \
+            {name: "Suitcase Rolling (solid)", value: "fas fa-suitcase-rolling"}, \
+            {name: "Sun (solid)", value: "fas fa-sun"}, \
+            {name: "Sun (regular)", value: "far fa-sun"}, \
+            {name: "Superpowers (brands)", value: "fab fa-superpowers"}, \
+            {name: "superscript (solid)", value: "fas fa-superscript"}, \
+            {name: "Supple (brands)", value: "fab fa-supple"}, \
+            {name: "Hushed Face (solid)", value: "fas fa-surprise"}, \
+            {name: "Hushed Face (regular)", value: "far fa-surprise"}, \
+            {name: "Suse (brands)", value: "fab fa-suse"}, \
+            {name: "Swatchbook (solid)", value: "fas fa-swatchbook"}, \
+            {name: "Swimmer (solid)", value: "fas fa-swimmer"}, \
+            {name: "Swimming Pool (solid)", value: "fas fa-swimming-pool"}, \
+            {name: "Synagogue (solid)", value: "fas fa-synagogue"}, \
+            {name: "Sync (solid)", value: "fas fa-sync"}, \
+            {name: "Alternate Sync (solid)", value: "fas fa-sync-alt"}, \
+            {name: "Syringe (solid)", value: "fas fa-syringe"}, \
+            {name: "table (solid)", value: "fas fa-table"}, \
+            {name: "Table Tennis (solid)", value: "fas fa-table-tennis"}, \
+            {name: "tablet (solid)", value: "fas fa-tablet"}, \
+            {name: "Alternate Tablet (solid)", value: "fas fa-tablet-alt"}, \
+            {name: "Tablets (solid)", value: "fas fa-tablets"}, \
+            {name: "Alternate Tachometer (solid)", value: "fas fa-tachometer-alt"}, \
+            {name: "tag (solid)", value: "fas fa-tag"}, \
+            {name: "tags (solid)", value: "fas fa-tags"}, \
+            {name: "Tape (solid)", value: "fas fa-tape"}, \
+            {name: "Tasks (solid)", value: "fas fa-tasks"}, \
+            {name: "Taxi (solid)", value: "fas fa-taxi"}, \
+            {name: "TeamSpeak (brands)", value: "fab fa-teamspeak"}, \
+            {name: "Teeth (solid)", value: "fas fa-teeth"}, \
+            {name: "Teeth Open (solid)", value: "fas fa-teeth-open"}, \
+            {name: "Telegram (brands)", value: "fab fa-telegram"}, \
+            {name: "Telegram Plane (brands)", value: "fab fa-telegram-plane"}, \
+            {name: "High Temperature (solid)", value: "fas fa-temperature-high"}, \
+            {name: "Low Temperature (solid)", value: "fas fa-temperature-low"}, \
+            {name: "Tencent Weibo (brands)", value: "fab fa-tencent-weibo"}, \
+            {name: "Tenge (solid)", value: "fas fa-tenge"}, \
+            {name: "Terminal (solid)", value: "fas fa-terminal"}, \
+            {name: "text-height (solid)", value: "fas fa-text-height"}, \
+            {name: "text-width (solid)", value: "fas fa-text-width"}, \
+            {name: "th (solid)", value: "fas fa-th"}, \
+            {name: "th-large (solid)", value: "fas fa-th-large"}, \
+            {name: "th-list (solid)", value: "fas fa-th-list"}, \
+            {name: "The Red Yeti (brands)", value: "fab fa-the-red-yeti"}, \
+            {name: "Theater Masks (solid)", value: "fas fa-theater-masks"}, \
+            {name: "Themeco (brands)", value: "fab fa-themeco"}, \
+            {name: "ThemeIsle (brands)", value: "fab fa-themeisle"}, \
+            {name: "Thermometer (solid)", value: "fas fa-thermometer"}, \
+            {name: "Thermometer Empty (solid)", value: "fas fa-thermometer-empty"}, \
+            {name: "Thermometer Full (solid)", value: "fas fa-thermometer-full"}, \
+            {name: "Thermometer 1/2 Full (solid)", value: "fas fa-thermometer-half"}, \
+            {name: "Thermometer 1/4 Full (solid)", value: "fas fa-thermometer-quarter"}, \
+            {name: "Thermometer 3/4 Full (solid)", value: "fas fa-thermometer-three-quarters"}, \
+            {name: "Think Peaks (brands)", value: "fab fa-think-peaks"}, \
+            {name: "thumbs-down (solid)", value: "fas fa-thumbs-down"}, \
+            {name: "thumbs-down (regular)", value: "far fa-thumbs-down"}, \
+            {name: "thumbs-up (solid)", value: "fas fa-thumbs-up"}, \
+            {name: "thumbs-up (regular)", value: "far fa-thumbs-up"}, \
+            {name: "Thumbtack (solid)", value: "fas fa-thumbtack"}, \
+            {name: "Alternate Ticket (solid)", value: "fas fa-ticket-alt"}, \
+            {name: "Times (solid)", value: "fas fa-times"}, \
+            {name: "Times Circle (solid)", value: "fas fa-times-circle"}, \
+            {name: "Times Circle (regular)", value: "far fa-times-circle"}, \
+            {name: "tint (solid)", value: "fas fa-tint"}, \
+            {name: "Tint Slash (solid)", value: "fas fa-tint-slash"}, \
+            {name: "Tired Face (solid)", value: "fas fa-tired"}, \
+            {name: "Tired Face (regular)", value: "far fa-tired"}, \
+            {name: "Toggle Off (solid)", value: "fas fa-toggle-off"}, \
+            {name: "Toggle On (solid)", value: "fas fa-toggle-on"}, \
+            {name: "Toilet (solid)", value: "fas fa-toilet"}, \
+            {name: "Toilet Paper (solid)", value: "fas fa-toilet-paper"}, \
+            {name: "Toolbox (solid)", value: "fas fa-toolbox"}, \
+            {name: "Tools (solid)", value: "fas fa-tools"}, \
+            {name: "Tooth (solid)", value: "fas fa-tooth"}, \
+            {name: "Torah (solid)", value: "fas fa-torah"}, \
+            {name: "Torii Gate (solid)", value: "fas fa-torii-gate"}, \
+            {name: "Tractor (solid)", value: "fas fa-tractor"}, \
+            {name: "Trade Federation (brands)", value: "fab fa-trade-federation"}, \
+            {name: "Trademark (solid)", value: "fas fa-trademark"}, \
+            {name: "Traffic Light (solid)", value: "fas fa-traffic-light"}, \
+            {name: "Train (solid)", value: "fas fa-train"}, \
+            {name: "Tram (solid)", value: "fas fa-tram"}, \
+            {name: "Transgender (solid)", value: "fas fa-transgender"}, \
+            {name: "Alternate Transgender (solid)", value: "fas fa-transgender-alt"}, \
+            {name: "Trash (solid)", value: "fas fa-trash"}, \
+            {name: "Alternate Trash (solid)", value: "fas fa-trash-alt"}, \
+            {name: "Alternate Trash (regular)", value: "far fa-trash-alt"}, \
+            {name: "Tree (solid)", value: "fas fa-tree"}, \
+            {name: "Trello (brands)", value: "fab fa-trello"}, \
+            {name: "TripAdvisor (brands)", value: "fab fa-tripadvisor"}, \
+            {name: "trophy (solid)", value: "fas fa-trophy"}, \
+            {name: "truck (solid)", value: "fas fa-truck"}, \
+            {name: "Truck Loading (solid)", value: "fas fa-truck-loading"}, \
+            {name: "Truck Monster (solid)", value: "fas fa-truck-monster"}, \
+            {name: "Truck Moving (solid)", value: "fas fa-truck-moving"}, \
+            {name: "Truck Side (solid)", value: "fas fa-truck-pickup"}, \
+            {name: "T-Shirt (solid)", value: "fas fa-tshirt"}, \
+            {name: "TTY (solid)", value: "fas fa-tty"}, \
+            {name: "Tumblr (brands)", value: "fab fa-tumblr"}, \
+            {name: "Tumblr Square (brands)", value: "fab fa-tumblr-square"}, \
+            {name: "Television (solid)", value: "fas fa-tv"}, \
+            {name: "Twitch (brands)", value: "fab fa-twitch"}, \
+            {name: "Twitter (brands)", value: "fab fa-twitter"}, \
+            {name: "Twitter Square (brands)", value: "fab fa-twitter-square"}, \
+            {name: "Typo3 (brands)", value: "fab fa-typo3"}, \
+            {name: "Uber (brands)", value: "fab fa-uber"}, \
+            {name: "Ubuntu (brands)", value: "fab fa-ubuntu"}, \
+            {name: "UIkit (brands)", value: "fab fa-uikit"}, \
+            {name: "Umbrella (solid)", value: "fas fa-umbrella"}, \
+            {name: "Umbrella Beach (solid)", value: "fas fa-umbrella-beach"}, \
+            {name: "Underline (solid)", value: "fas fa-underline"}, \
+            {name: "Undo (solid)", value: "fas fa-undo"}, \
+            {name: "Alternate Undo (solid)", value: "fas fa-undo-alt"}, \
+            {name: "Uniregistry (brands)", value: "fab fa-uniregistry"}, \
+            {name: "Universal Access (solid)", value: "fas fa-universal-access"}, \
+            {name: "University (solid)", value: "fas fa-university"}, \
+            {name: "unlink (solid)", value: "fas fa-unlink"}, \
+            {name: "unlock (solid)", value: "fas fa-unlock"}, \
+            {name: "Alternate Unlock (solid)", value: "fas fa-unlock-alt"}, \
+            {name: "Untappd (brands)", value: "fab fa-untappd"}, \
+            {name: "Upload (solid)", value: "fas fa-upload"}, \
+            {name: "UPS (brands)", value: "fab fa-ups"}, \
+            {name: "USB (brands)", value: "fab fa-usb"}, \
+            {name: "User (solid)", value: "fas fa-user"}, \
+            {name: "User (regular)", value: "far fa-user"}, \
+            {name: "Alternate User (solid)", value: "fas fa-user-alt"}, \
+            {name: "Alternate User Slash (solid)", value: "fas fa-user-alt-slash"}, \
+            {name: "User Astronaut (solid)", value: "fas fa-user-astronaut"}, \
+            {name: "User Check (solid)", value: "fas fa-user-check"}, \
+            {name: "User Circle (solid)", value: "fas fa-user-circle"}, \
+            {name: "User Circle (regular)", value: "far fa-user-circle"}, \
+            {name: "User Clock (solid)", value: "fas fa-user-clock"}, \
+            {name: "User Cog (solid)", value: "fas fa-user-cog"}, \
+            {name: "User Edit (solid)", value: "fas fa-user-edit"}, \
+            {name: "User Friends (solid)", value: "fas fa-user-friends"}, \
+            {name: "User Graduate (solid)", value: "fas fa-user-graduate"}, \
+            {name: "User Injured (solid)", value: "fas fa-user-injured"}, \
+            {name: "User Lock (solid)", value: "fas fa-user-lock"}, \
+            {name: "user-md (solid)", value: "fas fa-user-md"}, \
+            {name: "User Minus (solid)", value: "fas fa-user-minus"}, \
+            {name: "User Ninja (solid)", value: "fas fa-user-ninja"}, \
+            {name: "User Plus (solid)", value: "fas fa-user-plus"}, \
+            {name: "User Secret (solid)", value: "fas fa-user-secret"}, \
+            {name: "User Shield (solid)", value: "fas fa-user-shield"}, \
+            {name: "User Slash (solid)", value: "fas fa-user-slash"}, \
+            {name: "User Tag (solid)", value: "fas fa-user-tag"}, \
+            {name: "User Tie (solid)", value: "fas fa-user-tie"}, \
+            {name: "Remove User (solid)", value: "fas fa-user-times"}, \
+            {name: "Users (solid)", value: "fas fa-users"}, \
+            {name: "Users Cog (solid)", value: "fas fa-users-cog"}, \
+            {name: "United States Postal Service (brands)", value: "fab fa-usps"}, \
+            {name: "us-Sunnah Foundation (brands)", value: "fab fa-ussunnah"}, \
+            {name: "Utensil Spoon (solid)", value: "fas fa-utensil-spoon"}, \
+            {name: "Utensils (solid)", value: "fas fa-utensils"}, \
+            {name: "Vaadin (brands)", value: "fab fa-vaadin"}, \
+            {name: "Vector Square (solid)", value: "fas fa-vector-square"}, \
+            {name: "Venus (solid)", value: "fas fa-venus"}, \
+            {name: "Venus Double (solid)", value: "fas fa-venus-double"}, \
+            {name: "Venus Mars (solid)", value: "fas fa-venus-mars"}, \
+            {name: "Viacoin (brands)", value: "fab fa-viacoin"}, \
+            {name: "Video (brands)", value: "fab fa-viadeo"}, \
+            {name: "Video Square (brands)", value: "fab fa-viadeo-square"}, \
+            {name: "Vial (solid)", value: "fas fa-vial"}, \
+            {name: "Vials (solid)", value: "fas fa-vials"}, \
+            {name: "Viber (brands)", value: "fab fa-viber"}, \
+            {name: "Video (solid)", value: "fas fa-video"}, \
+            {name: "Video Slash (solid)", value: "fas fa-video-slash"}, \
+            {name: "Vihara (solid)", value: "fas fa-vihara"}, \
+            {name: "Vimeo (brands)", value: "fab fa-vimeo"}, \
+            {name: "Vimeo Square (brands)", value: "fab fa-vimeo-square"}, \
+            {name: "Vimeo (brands)", value: "fab fa-vimeo-v"}, \
+            {name: "Vine (brands)", value: "fab fa-vine"}, \
+            {name: "VK (brands)", value: "fab fa-vk"}, \
+            {name: "VNV (brands)", value: "fab fa-vnv"}, \
+            {name: "Volleyball Ball (solid)", value: "fas fa-volleyball-ball"}, \
+            {name: "Volume Down (solid)", value: "fas fa-volume-down"}, \
+            {name: "Volume Mute (solid)", value: "fas fa-volume-mute"}, \
+            {name: "Volume Off (solid)", value: "fas fa-volume-off"}, \
+            {name: "Volume Up (solid)", value: "fas fa-volume-up"}, \
+            {name: "Vote Yea (solid)", value: "fas fa-vote-yea"}, \
+            {name: "Cardboard VR (solid)", value: "fas fa-vr-cardboard"}, \
+            {name: "Vue.js (brands)", value: "fab fa-vuejs"}, \
+            {name: "Walking (solid)", value: "fas fa-walking"}, \
+            {name: "Wallet (solid)", value: "fas fa-wallet"}, \
+            {name: "Warehouse (solid)", value: "fas fa-warehouse"}, \
+            {name: "Water (solid)", value: "fas fa-water"}, \
+            {name: "Weebly (brands)", value: "fab fa-weebly"}, \
+            {name: "Weibo (brands)", value: "fab fa-weibo"}, \
+            {name: "Weight (solid)", value: "fas fa-weight"}, \
+            {name: "Hanging Weight (solid)", value: "fas fa-weight-hanging"}, \
+            {name: "Weixin (WeChat) (brands)", value: "fab fa-weixin"}, \
+            {name: "What's App (brands)", value: "fab fa-whatsapp"}, \
+            {name: "What's App Square (brands)", value: "fab fa-whatsapp-square"}, \
+            {name: "Wheelchair (solid)", value: "fas fa-wheelchair"}, \
+            {name: "WHMCS (brands)", value: "fab fa-whmcs"}, \
+            {name: "WiFi (solid)", value: "fas fa-wifi"}, \
+            {name: "Wikipedia W (brands)", value: "fab fa-wikipedia-w"}, \
+            {name: "Wind (solid)", value: "fas fa-wind"}, \
+            {name: "Window Close (solid)", value: "fas fa-window-close"}, \
+            {name: "Window Close (regular)", value: "far fa-window-close"}, \
+            {name: "Window Maximize (solid)", value: "fas fa-window-maximize"}, \
+            {name: "Window Maximize (regular)", value: "far fa-window-maximize"}, \
+            {name: "Window Minimize (solid)", value: "fas fa-window-minimize"}, \
+            {name: "Window Minimize (regular)", value: "far fa-window-minimize"}, \
+            {name: "Window Restore (solid)", value: "fas fa-window-restore"}, \
+            {name: "Window Restore (regular)", value: "far fa-window-restore"}, \
+            {name: "Windows (brands)", value: "fab fa-windows"}, \
+            {name: "Wine Bottle (solid)", value: "fas fa-wine-bottle"}, \
+            {name: "Wine Glass (solid)", value: "fas fa-wine-glass"}, \
+            {name: "Alternate Wine Glas (solid)", value: "fas fa-wine-glass-alt"}, \
+            {name: "Wix (brands)", value: "fab fa-wix"}, \
+            {name: "Wizards of the Coast (brands)", value: "fab fa-wizards-of-the-coast"}, \
+            {name: "Wolf Pack Battalion (brands)", value: "fab fa-wolf-pack-battalion"}, \
+            {name: "Won Sign (solid)", value: "fas fa-won-sign"}, \
+            {name: "WordPress Logo (brands)", value: "fab fa-wordpress"}, \
+            {name: "Wordpress Simple (brands)", value: "fab fa-wordpress-simple"}, \
+            {name: "WPBeginner (brands)", value: "fab fa-wpbeginner"}, \
+            {name: "WPExplorer (brands)", value: "fab fa-wpexplorer"}, \
+            {name: "WPForms (brands)", value: "fab fa-wpforms"}, \
+            {name: "wpressr (brands)", value: "fab fa-wpressr"}, \
+            {name: "Wrench (solid)", value: "fas fa-wrench"}, \
+            {name: "X-Ray (solid)", value: "fas fa-x-ray"}, \
+            {name: "Xbox (brands)", value: "fab fa-xbox"}, \
+            {name: "Xing (brands)", value: "fab fa-xing"}, \
+            {name: "Xing Square (brands)", value: "fab fa-xing-square"}, \
+            {name: "Y Combinator (brands)", value: "fab fa-y-combinator"}, \
+            {name: "Yahoo Logo (brands)", value: "fab fa-yahoo"}, \
+            {name: "Yandex (brands)", value: "fab fa-yandex"}, \
+            {name: "Yandex International (brands)", value: "fab fa-yandex-international"}, \
+            {name: "Yarn (brands)", value: "fab fa-yarn"}, \
+            {name: "Yelp (brands)", value: "fab fa-yelp"}, \
+            {name: "Yen Sign (solid)", value: "fas fa-yen-sign"}, \
+            {name: "Yin Yang (solid)", value: "fas fa-yin-yang"}, \
+            {name: "Yoast (brands)", value: "fab fa-yoast"}, \
+            {name: "YouTube (brands)", value: "fab fa-youtube"}, \
+            {name: "YouTube Square (brands)", value: "fab fa-youtube-square"}, \
+            {name: "Zhihu (brands)", value: "fab fa-zhihu"} \
+        }
+
+        set font_names_list to {}
+
+        repeat with fontItem in fonts_list
+        	set name_of_font to name of fontItem
+        	set end of font_names_list to name_of_font
+        end repeat
+
+        set selected_font to {\
+            choose from list font_names_list \
+                with title "Fontawesome" \
+                with prompt "Select icon"\
+            }
+
+        repeat with fontItem in fonts_list
+        	if name of fontItem = selected_font as string then
+        		set need_font to fontItem
+        	end if
+        end repeat
+
+        value of need_font
+    end tell
+AS)
+
+if [[ $res ]]; then
+    printf "&lt;i class=\"$res\"&gt;&lt;/i&gt;"
+fi
+
+osascript -e 'tell app "TextMate" to activate' &amp;&gt;/dev/null &amp;</string>
+	<key>input</key>
+	<string>none</string>
+	<key>inputFormat</key>
+	<string>text</string>
+	<key>name</key>
+	<string>Fontawesome</string>
+	<key>outputCaret</key>
+	<string>afterOutput</string>
+	<key>outputFormat</key>
+	<string>text</string>
+	<key>outputLocation</key>
+	<string>atCaret</string>
+	<key>scope</key>
+	<string>text.html</string>
+	<key>tabTrigger</key>
+	<string>faw</string>
+	<key>uuid</key>
+	<string>37C6D515-1B32-4D16-BD42-6B0FFB4B0A3F</string>
+	<key>version</key>
+	<integer>2</integer>
+</dict>
+</plist>

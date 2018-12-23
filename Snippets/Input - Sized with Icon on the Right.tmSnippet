@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;div class="control has-icons-right"&gt;
+    &lt;input class="input is-${1|small,medium,large|}" type="${2|text,password,email,tel|}" placeholder="${3:Place holder}"&gt;
+    &lt;span class="icon is-right"&gt;faw$0&lt;/span&gt;
+&lt;/div&gt;</string>
+	<key>name</key>
+	<string>Input - Sized with Icon on the Right</string>
+	<key>scope</key>
+	<string>text.html</string>
+	<key>tabTrigger</key>
+	<string>frm</string>
+	<key>uuid</key>
+	<string>EE176E41-BB70-455F-8062-D8C379DCFE51</string>
+</dict>
+</plist>
