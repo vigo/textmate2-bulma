@@ -1531,7 +1531,7 @@ osascript -e 'tell app "TextMate" to activate' &amp;&gt;/dev/null &amp;</string>
 	<key>inputFormat</key>
 	<string>text</string>
 	<key>name</key>
-	<string>Fontawesome</string>
+	<string>Fontawesome Selector</string>
 	<key>outputCaret</key>
 	<string>afterOutput</string>
 	<key>outputFormat</key>

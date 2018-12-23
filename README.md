@@ -1,4 +1,4 @@
-![Version](https://img.shields.io/badge/version-0.1.2-orange.svg)
+![Version](https://img.shields.io/badge/version-0.1.3-orange.svg)
 ![Bulma](https://img.shields.io/badge/bulma-0.7.2-green.svg)
 ![Fontawesome](https://img.shields.io/badge/fontawesome-5.3.1-green.svg)
 ![Plaftorm](https://img.shields.io/badge/platform-TextMate-blue.svg)
@@ -35,6 +35,7 @@ Reload TextMate If It’s needed.
 | `lay` + <kbd>⇥</kbd>  | Layout helper                               |
 | `laye` + <kbd>⇥</kbd> | Layout examples                             |
 | `frm` + <kbd>⇥</kbd>  | Form helpers                                |
+| `faw` + <kbd>⇥</kbd>  | Fontawesome helpers                         |
 
 ---
 
@@ -166,7 +167,9 @@ Covers form helpers
 
 ### `faw`
 
-Choose Fontawesome icon from list box!
+Choose Fontawesome icon from selection UI or auto-completion box. Selection UI
+uses AppleScript to build UI. It takes a bit time for building 1400+ options.
+If you now the icon, try **Class Only** edition for much much faster.
 
 ---
 
