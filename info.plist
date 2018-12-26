@@ -20,6 +20,8 @@
             <string>------------------------------------</string>
             <string>26CBA2E7-E4F5-43F5-8DFD-65F0F3FE4F4B</string>
             <string>CEBA06B3-DFA7-40FB-A8AB-B9EB837B4143</string>
+            <string>3AD903C0-FB67-4232-AED9-0189D3738F97</string>
+            <string>485014A5-E7A4-4AE0-B4CE-5B1EF80B8779</string>
             <string>------------------------------------</string>
             <string>17C3C2AA-38F7-44FA-970C-8CC89673EEFC</string>
             <string>0E2D52BC-67DA-4A0F-B952-C8CAC49CEF2E</string>
@@ -323,6 +325,29 @@
                 <key>name</key>
                 <string>Tools</string>
             </dict>
+            
+            <key>3AD903C0-FB67-4232-AED9-0189D3738F97</key>
+            <dict>
+                <key>items</key>
+                <array>
+                    <string>79EE3330-6674-4B19-AE6D-DE34CDA5C9CF</string>
+                    <string>A59C2F68-0C05-42B1-9D8C-293557720C39</string>
+                </array>
+                <key>name</key>
+                <string>Responsive Visibility Helpers</string>
+            </dict>
+            
+            <key>485014A5-E7A4-4AE0-B4CE-5B1EF80B8779</key>
+            <dict>
+                <key>items</key>
+                <array>
+                    <string>DCA4EEA8-936D-4F66-B84C-FE9735D83F34</string>
+                    <string>89A5F733-1756-4FA2-B20D-4691EC32508D</string>
+                    <string>87B90023-DD1D-4526-BA57-C23B6FD0B286</string>
+                </array>
+                <key>name</key>
+                <string>Floating, Spacing and more</string>
+            </dict>    
             
         </dict>
 

@@ -3,14 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>is-size-${1|1,2,3,4,5,6,7|}-${2|mobile,tablet,touch,desktop,widescreen,fullhd|}</string>
+	<string>is-${1|marginless,paddingless|}</string>
 	<key>name</key>
-	<string>Text Size - Responsive</string>
+	<string>Spacing Helpers</string>
 	<key>scope</key>
 	<string>text.html</string>
 	<key>tabTrigger</key>
 	<string>hlp</string>
 	<key>uuid</key>
-	<string>C0D46DAD-0F1F-4C16-8B3C-C3694BC127CC</string>
+	<string>89A5F733-1756-4FA2-B20D-4691EC32508D</string>
 </dict>
 </plist>

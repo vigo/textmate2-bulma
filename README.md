@@ -1,4 +1,4 @@
-![Version](https://img.shields.io/badge/version-0.1.3-orange.svg)
+![Version](https://img.shields.io/badge/version-0.2.0-orange.svg)
 ![Bulma](https://img.shields.io/badge/bulma-0.7.2-green.svg)
 ![Fontawesome](https://img.shields.io/badge/fontawesome-5.3.1-green.svg)
 ![Plaftorm](https://img.shields.io/badge/platform-TextMate-blue.svg)
@@ -28,8 +28,7 @@ Reload TextMate If It’s needed.
 | Trigger                | Information                                 |
 |:-----------------------|:--------------------------------------------|
 | `new` + <kbd>⇥</kbd>  | Generates basic html starter page template. |
-| `cl` + <kbd>⇥</kbd>   | Color helper                                |
-| `typ` + <kbd>⇥</kbd>  | Typography helper                           |
+| `hlp` + <kbd>⇥</kbd>  | Helper classes                              |
 | `col` + <kbd>⇥</kbd>  | Column helper                               |
 | `cole` + <kbd>⇥</kbd> | Column examples                             |
 | `lay` + <kbd>⇥</kbd>  | Layout helper                               |
@@ -64,16 +63,17 @@ Reload TextMate If It’s needed.
 
 ---
 
-### `cl`
+### `hlp`
+
+#### Color Helpers
 
 Covers text and background colors. Prefixes are:
 
 - `has-text-`
 - `has-background-`
 
----
 
-### `typ`
+#### Typography Helpers
 
 Covers typography related; text sizes, alignments, text transformations,
 weights and font family. Prefixes are:
@@ -85,6 +85,103 @@ weights and font family. Prefixes are:
 - `is-` + transformations (*lowercase etc...*)
 - `is-` + weights (*bold etc...*)
 - `is-family-` + families (*monospace etc...*)
+
+#### Responsive Visibility Helpers
+
+`block`:
+
+- `is-block-mobile`
+- `is-block-touch`
+- `is-block-tablet`
+- `is-block-tablet-only`
+- `is-block-desktop`
+- `is-block-desktop-only`
+- `is-block-widescreen`
+- `is-block-widescreen-only`
+- `is-block-fullhd`
+
+`flex`:
+
+- `is-flex-mobile`
+- `is-flex-touch`
+- `is-flex-tablet`
+- `is-flex-tablet-only`
+- `is-flex-desktop`
+- `is-flex-desktop-only`
+- `is-flex-widescreen`
+- `is-flex-widescreen-only`
+- `is-flex-fullhd`
+
+`inline`:
+
+- `is-inline-mobile`
+- `is-inline-touch`
+- `is-inline-tablet`
+- `is-inline-tablet-only`
+- `is-inline-desktop`
+- `is-inline-desktop-only`
+- `is-inline-widescreen`
+- `is-inline-widescreen-only`
+- `is-inline-fullhd`
+
+`inline-block`:
+
+- `is-inline-block-mobile`
+- `is-inline-block-touch`
+- `is-inline-block-tablet`
+- `is-inline-block-tablet-only`
+- `is-inline-block-desktop`
+- `is-inline-block-desktop-only`
+- `is-inline-block-widescreen`
+- `is-inline-block-widescreen-only`
+- `is-inline-block-fullhd`
+
+`inline-flex`:
+
+- `is-inline-flex-mobile`
+- `is-inline-flex-touch`
+- `is-inline-flex-tablet`
+- `is-inline-flex-tablet-only`
+- `is-inline-flex-desktop`
+- `is-inline-flex-desktop-only`
+- `is-inline-flex-widescreen`
+- `is-inline-flex-widescreen-only`
+- `is-inline-flex-fullhd`
+
+`hidden`:
+
+- `is-hidden-touch`
+- `is-hidden-mobile`
+- `is-hidden-tablet`
+- `is-hidden-tablet-only`
+- `is-hidden-dektop`
+- `is-hidden-desktop-only`
+- `is-hidden-widescreen`
+- `is-hidden-widescreen-only`
+- `is-hidden-fullhd`
+
+#### Floating, Spacing and More
+
+Floating;
+
+- `is-clearfix`
+- `is-pulled-left`
+- `is-pulled-right`
+
+Spacing;
+
+- `is-marginless`
+- `is-paddingless`
+
+And more...
+
+- `is-overlay`
+- `is-clipped`
+- `is-radiusless`
+- `is-shadowless`
+- `is-unselectable`
+- `is-invisible`
+- `is-sr-only`
 
 ---
 
@@ -183,11 +280,10 @@ If you now the icon, try **Class Only** edition for much much faster.
 
 ## Screenshots
 
-<p align="center">
-    <img src="Screenshots/fontawesome.png" width="33%" title="Fontawesome selector" align="top">
-    <img src="Screenshots/form.png" width="33%" title="Form" align="top">
-    <img src="Screenshots/layout.png" width="33%" title="Layout" align="top">
-</p>
+- [Fontawesome selector](Screenshots/fontawesome.png)
+- [Layout Helper](Screenshots/layout.png)
+- [Form Helper](Screenshots/form.png)
+- [Helper Classes](Screenshots/helpers.png)
 
 ---
 
